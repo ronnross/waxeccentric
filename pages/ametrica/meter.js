@@ -6,7 +6,7 @@ const Meter = () => {
   return (
     <>
       <Head>
-        <title>some title</title>
+        <title>Ametrica | Meter</title>
         <meta name="keywords" content="Meter" />
       </Head>
       <section name="meter">
