@@ -1,0 +1,51 @@
+.ruler {
+  position: relative;
+  height: 90px;
+  margin: 10px;
+  padding: 0 40px 0 40px;
+  background-color: var(--brown-100);
+  border-radius: 4px;
+  box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
+  border-radius: Max(0px, Min(var(--radius), calc((100vw - 4px - 100%) * 9999))) /
+    var(--radius);
+}
+.stickContainer,
+.minorStickContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.minorStickContainer {
+  height: 50%;
+}
+.stickContainer .stick {
+  flex-grow: 1;
+  height: 100%;
+  border-left: 2px solid var(--brown-900);
+}
+.stickContainer .stick:last-child {
+  flex-grow: 0;
+  width: 2px;
+  background-color: var(--brown-900);
+}
+.minorStickContainer .minorStick {
+  width: 1px;
+  height: 100%;
+  background-color: var(--brown-900);
+}
+.minorStickContainer .minorStick:first-child,
+.minorStickContainer .minorStick:last-child {
+  width: 0px;
+}
+.stickValue {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  color: var(--brown-900);
+  font: 700 2em/2 ubuntu mono, consolas, monaco, monospace;
+  font-weight: bold;
+  font-size: 1.2em;
+}

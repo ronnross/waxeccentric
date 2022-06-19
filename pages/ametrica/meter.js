@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Head from "next/head";
+import MeterStick from "../../components/MeterStick";
+import MediaBox from "../../components/MediaBox";
 
 const Meter = () => {
   return (
@@ -8,11 +9,154 @@ const Meter = () => {
         <title>some title</title>
         <meta name="keywords" content="Meter" />
       </Head>
-      <div>
-        <h1>just an Meter</h1>
+      <section name="meter">
+        <h1 className="Heading__title">
+          Ame<span className="blue">(t)</span>rica
+        </h1>
+        <article className="Section__article">
+          <h2 className="Heading__title">Let's be practical.</h2>
+          <p>
+            Everyone needs to measure things. So let's measure together with a
+            common system. Let's put a high emphasis on creating something
+            simple and practical. Perhaps the easiest way to get started is with
+            distance. We need something as a base for our length. Let's use
+            this;
+          </p>
+          <MeterStick units={["1", "2"]} />
+          <p>
+            This ruler is arbitrary for now. It is some random fixed width for
+            the moment with several equally spaced lines. We need to name our
+            ruler so it is not confused with anything else. Let's use ...
+          </p>
+          <MediaBox image="cossutius_foot.jpg">
+            <h2>Meter</h2>
+            <p>
+              It comes from the Classic Greek word <i>Metron</i> that means to
+              measure. Seems simple enough, no?
+            </p>
+          </MediaBox>
+          <p>
+            Ok, now we have a name and some set length. We are all set! Let's
+            put it use. For our first experiment we can measure our hand 🖐.
+          </p>
+          <p>
+            🚨 Well, we have already encountered a problem. Our hand is less
+            than the length of our ruler. Seems we need to divide our ruler into
+            smaller peices. <br /> 🤔 <br />
+          </p>
+          <p>
+            Let's see if cutting into smaller pieces fixes this issue. Let's try
+            100 sections, and since we already started with a classic language
+            let's continue. We chose Greek for our whole measure let's use Latin
+            for our fractional units so we can tell the difference if we are
+            using smaller units or whole units. Don't over think the naming. 100
+            in Latin is <i>Centum</i>. With a little conjugation we get{" "}
+            <i>Centi</i>. Add that with our ruler's name we have{" "}
+            <i>Centimeter</i>.
+          </p>
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          />
+          <h3>Great! 🎉 </h3>
+          <p>
+            We get just over 19 centimeters (or 19cm). But our hand hangs just
+            over one of the number markers. Perhaps we need to divide the ruler
+            event more.
+            <br />
+            <br />
+            Let's add another 0 and try 1000. Using the same method as before
+            1000 in Latin is Milli. Adding our ruler name we have{" "}
+            <i>Millimeter</i>
+          </p>
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "997", "998", "999", "1000"]}
+          />
+          <p>
+            Now we have more accuracy. Our hand comes out ot 19.3cm or 193
+            millimeters (193mm). With this success let's set our sites on
+            something longer like ourselves. Let's measure our height. Ok, now
+            we have a different problem. Our ruler is not large enough so we
+            have to use more than one ruler.
+          </p>
+          <p>
+            We get 1 ruler (or 1 meter) and 70 centimeters (average height in
+            the U.S.). We can add them together using a decimal form and get 1.7
+            meters (or 1.7m).
+            <br />
+            <br />
+            Now I'm getting excited. Mainly because it is so easy to move
+            between the units.
+            <ul>
+              <li>1.7m</li>
+              <li>170cm</li>
+              <li>1700mm</li>
+            </ul>
+            I can do this in my head with little thought.
+          </p>
+          <p>
+            I think there is one last thing try. Measuring a great distance.
+            Let's measure how far we are from our favorite restaurant.
+            <br />
+            <br />
+            Ok I have mine. I'm going to lay the meter sticks end to end until I
+            reach my destination.
+          </p>
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          />
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          />
+          ...
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          />
+          <MeterStick
+            units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          />
+          <p>
+            Oh wow! It took me 1,100 sticks. What about you?
+            <br />
+            Well I'm thinking we need a name for large measure, because I'm not
+            saying 1 thousand and 100 meters all the time. How about we use 1000
+            like we did when dividing our ruler. I know you might be thinking we
+            can't use Milli or it will cause issues. Well remember what we said
+            earlier? We are using Greek for large measures. Greek for 1000 is
+            Kilo. Now we have a Kilometer or km. My favorite restaurant is 1.1km
+            from my home.
+          </p>
+          <p>
+            We have one last problem to solve. I have the ruler here at my home.
+            How do I get it to you? I mean I could always mail it, but what
+            happens if it gets damaged, lost, or worse shrinks a little over
+            time. We need something more reliable to share the exact size of our
+            ruler. It should be something outside of a physical object. Let get
+            Sci-fi and use some constant in the universe, like the speed of
+            light. The speed of light travels 299,792,458 meters per second. or
+            <span role="math" className="Equation">
+              <div className="group">
+                <span className="num">1</span>
+                <span className="sr-only">/</span>
+                <span className="den">299,792,458</span>
+              </div>
 
-        <Image src="/cossutius_foot.jpg" width={128} height={77} />
-      </div>
+              <div>per second</div>
+            </span>
+            <br />I can give you this equation. Now you would need some
+            equipment to measure light in a vacuum, but the point is you do not
+            something physical to create rulers for you or your friends. If we
+            still to the equation then we all have the same size ruler.
+            Incredible.
+          </p>
+          <p>
+            Ok, I'm tired of measuring all that. I think I need a drink. Perhaps
+            we can use what we created to measure our beverage.
+          </p>
+          <button className="Button" type="button">
+            Coming soon. Let's go measure liquids!!!
+          </button>
+        </article>
+      </section>
     </>
   );
 };

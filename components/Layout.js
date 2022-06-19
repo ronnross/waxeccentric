@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       </Head>
       <Navbar />
       {children}
-      <footer>make a footer component</footer>
+      <footer>Wax Eccentric </footer>
     </div>
   );
 };

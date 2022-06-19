@@ -27,6 +27,7 @@ code {
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -37,12 +38,21 @@ html {
 
 body {
   background-color: var(--grey-100);
+  height: 100%;
 }
 
-.Content-area {
+#__next {
+  height: 100%;
+}
+
+.content {
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 .Section__article {
