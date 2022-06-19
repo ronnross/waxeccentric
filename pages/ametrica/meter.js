@@ -14,29 +14,29 @@ const Meter = () => {
           Ame<span className="blue">(t)</span>rica
         </h1>
         <article className="Section__article">
-          <h2 className="Heading__title">Let's be practical.</h2>
+          <h2 className="Heading__title">Let us be practical.</h2>
           <p>
-            Everyone needs to measure things. So let's measure together with a
-            common system. Let's put a high emphasis on creating something
-            simple and practical. Perhaps the easiest way to get started is with
-            distance. We need something as a base for our length. Let's use
-            this;
+            Everyone needs to measure things. Perhaps we should measure together
+            with a common system. This system should have a high emphasis on
+            being practical and simple. Maybe the easiest way to get started is
+            with distance. We need something as a base for our length. What
+            about this?
           </p>
           <MeterStick units={["1", "2"]} />
           <p>
-            This ruler is arbitrary for now. It is some random fixed width for
+            This <i>ruler</i> is arbitrary for now. It is some random fixed width for
             the moment with several equally spaced lines. We need to name our
-            ruler so it is not confused with anything else. Let's use ...
+            ruler so it is not confused with anything else. Let us use ...
           </p>
-          <MediaBox image="cossutius_foot.jpg">
+          <MediaBox image="cossutius_foot.jpg" alt="The foot of Cossutius">
             <h2>Meter</h2>
             <p>
-              It comes from the Classic Greek word <i>Metron</i> that means to
-              measure. Seems simple enough, no?
+              It comes from the Classic Greek word <i>Metron</i> meaning to
+              measure.
             </p>
           </MediaBox>
           <p>
-            Ok, now we have a name and some set length. We are all set! Let's
+            Ok, now we have a name and some set length. We are all set! Let us
             put it use. For our first experiment we can measure our hand 🖐.
           </p>
           <p>
@@ -45,13 +45,13 @@ const Meter = () => {
             smaller peices. <br /> 🤔 <br />
           </p>
           <p>
-            Let's see if cutting into smaller pieces fixes this issue. Let's try
+            Let us see if cutting into smaller pieces fixes this issue. Let us try
             100 sections, and since we already started with a classic language
-            let's continue. We chose Greek for our whole measure let's use Latin
+            let us continue. We chose Greek for our whole measure let us use Latin
             for our fractional units so we can tell the difference if we are
-            using smaller units or whole units. Don't over think the naming. 100
+            using smaller units or whole units. Do not over think the naming. 100
             in Latin is <i>Centum</i>. With a little conjugation we get{" "}
-            <i>Centi</i>. Add that with our ruler's name we have{" "}
+            <i>Centi</i>. Add that with our ruler&apos;s name we have{" "}
             <i>Centimeter</i>.
           </p>
           <MeterStick
@@ -64,7 +64,7 @@ const Meter = () => {
             event more.
             <br />
             <br />
-            Let's add another 0 and try 1000. Using the same method as before
+            Let us add another 0 and try 1000. Using the same method as before
             1000 in Latin is Milli. Adding our ruler name we have{" "}
             <i>Millimeter</i>
           </p>
@@ -73,8 +73,8 @@ const Meter = () => {
           />
           <p>
             Now we have more accuracy. Our hand comes out ot 19.3cm or 193
-            millimeters (193mm). With this success let's set our sites on
-            something longer like ourselves. Let's measure our height. Ok, now
+            millimeters (193mm). With this success let us set our sites on
+            something longer like ourselves. Let us measure our height. Ok, now
             we have a different problem. Our ruler is not large enough so we
             have to use more than one ruler.
           </p>
@@ -84,7 +84,7 @@ const Meter = () => {
             meters (or 1.7m).
             <br />
             <br />
-            Now I'm getting excited. Mainly because it is so easy to move
+            Now I&apos;m getting excited. Mainly because it is so easy to move
             between the units.
             <ul>
               <li>1.7m</li>
@@ -95,10 +95,10 @@ const Meter = () => {
           </p>
           <p>
             I think there is one last thing try. Measuring a great distance.
-            Let's measure how far we are from our favorite restaurant.
+            Let us measure how far we are from our favorite restaurant.
             <br />
             <br />
-            Ok I have mine. I'm going to lay the meter sticks end to end until I
+            Ok I have mine. I&apos;m going to lay the meter sticks end to end until I
             reach my destination.
           </p>
           <MeterStick
@@ -117,10 +117,10 @@ const Meter = () => {
           <p>
             Oh wow! It took me 1,100 sticks. What about you?
             <br />
-            Well I'm thinking we need a name for large measure, because I'm not
+            Well I&apos;m thinking we need a name for large measure, because I&apos;m not
             saying 1 thousand and 100 meters all the time. How about we use 1000
             like we did when dividing our ruler. I know you might be thinking we
-            can't use Milli or it will cause issues. Well remember what we said
+            cannot use Milli or it will cause issues. Well remember what we said
             earlier? We are using Greek for large measures. Greek for 1000 is
             Kilo. Now we have a Kilometer or km. My favorite restaurant is 1.1km
             from my home.
@@ -149,11 +149,11 @@ const Meter = () => {
             Incredible.
           </p>
           <p>
-            Ok, I'm tired of measuring all that. I think I need a drink. Perhaps
+            Ok, I&apos;m tired of measuring all that. I think I need a drink. Perhaps
             we can use what we created to measure our beverage.
           </p>
           <button className="Button" type="button">
-            Coming soon. Let's go measure liquids!!!
+            Coming soon. Let us go measure liquids!!!
           </button>
         </article>
       </section>
