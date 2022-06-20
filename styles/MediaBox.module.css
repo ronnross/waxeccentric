@@ -5,14 +5,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-items: end;
+  justify-items: center;
 }
 
 .textArea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 6rem;
+  margin: 3rem;
 }
 
 .imageArea {

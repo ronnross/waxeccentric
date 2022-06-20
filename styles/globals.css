@@ -48,7 +48,7 @@ body {
 .content {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1170px;
+  max-width: 800px;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -60,7 +60,7 @@ body {
   font-size: 20px;
   line-height: 30px;
   background-color: var(--white);
-  padding: 1.25rem;
+  padding: 3.75rem;
   box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
   border-radius: Max(0px, Min(var(--radius), calc((100vw - 4px - 100%) * 9999))) /
     var(--radius);
@@ -91,7 +91,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 12rem;
+  width: 15rem;
 }
 
 .group {
