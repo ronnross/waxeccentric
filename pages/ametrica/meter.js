@@ -14,7 +14,7 @@ const Meter = () => {
           Ame<span className="blue">(t)</span>rica
         </h1>
         <article className="Section__article">
-          <h2 className="Heading__title">Simple and Practical</h2>
+          <h2 className="Heading__title">Simple and Practical.</h2>
           <p>
             Everyone needs to measure things. Perhaps we should measure together
             with a common system. This system should have a high emphasis on
