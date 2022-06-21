@@ -158,7 +158,7 @@ const Meter = () => {
             Perhaps we can use what we created to measure our beverage.
           </p>
           <button className="Button" type="button">
-            Coming soon. Let us go measure liquids!!!
+            Coming soon. Time to measure liquids!!!
           </button>
         </article>
       </section>

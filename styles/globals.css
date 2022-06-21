@@ -60,12 +60,24 @@ body {
   font-size: 20px;
   line-height: 30px;
   background-color: var(--white);
-  padding: 3.75rem;
-  box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
-  border-radius: Max(0px, Min(var(--radius), calc((100vw - 4px - 100%) * 9999))) /
-    var(--radius);
+  padding: 1rem;
+
 }
 
+@media screen and (min-width: 800px) {
+  .Section__article {
+    font-family: var(--ff-sans-serif);
+    font-size: 20px;
+    line-height: 30px;
+    background-color: var(--white);
+    padding: 3.75rem;
+    box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
+    border-radius: Max(
+        0px,
+        Min(var(--radius), calc((100vw - 4px - 100%) * 9999))
+      ) / var(--radius);
+  }
+}
 .Heading__title {
   font-family: var(--ff-sans-serif);
   font-size: 48px;
