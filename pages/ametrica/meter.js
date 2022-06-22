@@ -10,7 +10,7 @@ const Meter = () => {
         <meta name="keywords" content="Meter" />
       </Head>
       <section name="meter">
-        <h1 className="Heading__title">
+        <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
         <article className="Section__article">
@@ -29,7 +29,7 @@ const Meter = () => {
             name our ruler so it is not confused with anything else. Let us use
             ...
           </p>
-          <MediaBox image="cossutius_foot.jpg">
+          <MediaBox image="laura-adai-E5ApkrnucMg-unsplash.jpg">
             <h2>Meter</h2>
             <p>
               It comes from the Classic Greek word <i>Metron</i> meaning to
@@ -88,7 +88,7 @@ const Meter = () => {
             Now I&apos;m getting excited. Mainly because it is so easy to move
             between the units.
           </p>
-          <MediaBox image="simon_stevin.jpg">
+          <MediaBox image="bady-abbas-hxi_yRxODNc-unsplash.jpg">
             <h2>Base 10</h2>
             <i>1.7m</i>
             <i>170cm</i>

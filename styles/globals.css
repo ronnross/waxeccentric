@@ -189,3 +189,13 @@ body {
   font-size: 8rem; /* 128px */
   line-height: 1;
 }
+
+.pl-4 {
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .pl-4 {
+    padding-left: 4rem;
+  }
+}
