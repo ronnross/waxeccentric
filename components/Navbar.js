@@ -4,7 +4,7 @@ import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <header className="navbar">
+    <header className={styles.navbar}>
       <div>
         <h1>WE</h1>
       </div>
