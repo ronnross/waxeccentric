@@ -3,7 +3,7 @@
   box-shadow: 8px 8px 0 rgb(32 33 37 / 10%);
   border-radius: 8px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   justify-items: center;
 }
@@ -16,6 +16,26 @@
 }
 
 .imageArea {
+  background-color: #ffcc00;
+  opacity: 0.8;
+  background-image: linear-gradient(#edc070 1px, transparent 1px),
+    linear-gradient(to right, #edc070 1px, #ffcc00 1px);
+  background-size: 20px 20px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 800px) {
+  .mediaBox {
+    background-color: var(--yellow);
+    box-shadow: 8px 8px 0 rgb(32 33 37 / 10%);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
 }

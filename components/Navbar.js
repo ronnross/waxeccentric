@@ -1,19 +1,24 @@
 import Link from "next/link";
+import styles from "../styles/Navbar.module.css";
+
 
 const Navbar = () => {
   return (
-    <nav>
+    <header className="navbar">
       <div>
         <h1>WE</h1>
       </div>
-      <Link href="/">
-        <a>Home</a>
-      </Link>{" "}
-      | &nbsp;
-      <Link href="/ametrica">
-        <a>Ametrica</a>
-      </Link>
-    </nav>
+
+      <nav>
+        <Link href="/">
+          <a>Home</a>
+        </Link>{" "}
+        | &nbsp;
+        <Link href="/ametrica/meter">
+          <a>Ametrica</a>
+        </Link>
+      </nav>
+    </header>
   );
 };
 
