@@ -119,6 +119,7 @@ const Meter = () => {
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
           />
+          
           <p>
             Oh wow! It took me 1,100 sticks. What about you?
             <br />
@@ -134,20 +135,25 @@ const Meter = () => {
             We have one last problem to solve. I have the ruler here at my home.
             How do I get this ruler to you? I mean I could always mail it, but
             what happens if it gets damaged, lost, or worse shrinks a little
-            over time. We need something more reliable to share the exact size
-            of our ruler. It should be something outside of a physical object.
-            We can get all Sci-fi and use a constant in the universe, like the
-            speed of light. The speed of light travels 299,792,458 meters per
-            second. or
-            <span role="math" className="Equation">
-              <div className="group">
-                <span className="num">1</span>
-                <span className="sr-only">/</span>
-                <span className="den">299,792,458</span>
-              </div>
-
-              <div>per second</div>
-            </span>
+            over time.
+            <br />
+            <br />
+            We need something more reliable to share the exact size of our
+            ruler. It should be something outside of a physical object. So light
+            is very abundant. We can define a meter as the length of the path
+            tavelled by light in a vacuum in
+            <br />
+            <br />
+            <MediaBox>
+              <span role="math" className="Equation">
+                <div className="group">
+                  <span className="num">1</span>
+                  <span className="sr-only">/</span>
+                  <span className="den">299,792,458</span>
+                </div>
+                <div>of a second</div>
+              </span>
+            </MediaBox>
             <br />I can give you this equation. Now you would need some
             equipment to measure light in a vacuum, but the point is you do not
             something physical to create rulers for you or your friends. If we
