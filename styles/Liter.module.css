@@ -1,15 +1,17 @@
 .squareArea {
+  margin-left: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 88px));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 243px));
   grid-template-rows: repeat(auto-fit, minmax(50px, 50px));
   grid-template-areas:
-    "tm ."
+    "tm tm"
     "f sm";
   align-items: center;
 }
 
 .measureTop {
   grid-area: tm;
+  text-align: center;
 }
 
 .measureSide {
@@ -19,8 +21,8 @@
 
 .square {
   grid-area: f;
-  height: 128px;
-  width: 128px;
+  height: 446px;
+  width: 446px;
   border: solid 5px black;
   border-radius: 3px;
 }

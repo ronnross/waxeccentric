@@ -23,7 +23,7 @@ const Meter = () => {
             with distance. We need something as a base for our length. What
             about this?
           </p>
-          <MeterStick units={["1", "2"]} />
+          <MeterStick units={["0", "1"]} />
           <p>
             This <i>ruler</i> is arbitrary for now. It is some random fixed
             width for the moment with several equally spaced lines. We need to
@@ -131,6 +131,85 @@ const Meter = () => {
             measures. Greek for 1000 is Kilo. Now we have a Kilometer or km. My
             favorite restaurant is 1.1km from my home.
           </p>
+          <p>
+            Let me take some liberties and fill out the rest of measure names
+            and add it to a table.
+          </p>
+          <table className="table">
+            <thead>
+              <tr>
+                <th colspan="2">Amount</th>
+                <th>Prefix</th>
+                <th>Measure</th>
+                <th>Abbreviation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="blue">&times;</td>
+                <td>1,000</td>
+                <td>kilo</td>
+                <td className="blue">meter</td>
+                <td>
+                  k<span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="blue">&times;</td>
+                <td>100</td>
+                <td>hecto</td>
+                <td className="blue">meter</td>
+                <td>
+                  h<span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="blue">&times;</td>
+                <td>10</td>
+                <td>deka</td>
+                <td className="blue">meter</td>
+                <td>
+                  da<span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td className="blue">meter</td>
+                <td>
+                  <span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="blue">&divide;</td>
+                <td>10</td>
+                <td>deci</td>
+                <td className="blue">meter</td>
+                <td>
+                  d<span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="blue">&divide;</td>
+                <td>100</td>
+                <td>centi</td>
+                <td className="blue">meter</td>
+                <td>
+                  c<span className="blue">m</span>
+                </td>
+              </tr>
+              <tr>
+                <td className="blue">&divide;</td>
+                <td>1,000</td>
+                <td>milli</td>
+                <td className="blue">meter</td>
+                <td>
+                  m<span className="blue">m</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <p>
             We have one last problem to solve. I have the ruler here at my home.
             How do I get this ruler to you? I mean I could always mail it, but
