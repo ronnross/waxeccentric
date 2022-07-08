@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../../styles/Liter.module.css";
 import MeterStick from "../../components/MeterStick";
 import Cube from "../../components/Cube";
+import Link from "next/link";
 
 const Liter = () => {
   return (
@@ -39,7 +40,7 @@ const Liter = () => {
             and if you remember we already defined that as a decimeter.
             <br />
             <br />
-            Let's take the decimeter and create a box.
+            Let&apos;s take the decimeter and create a box.
           </p>
           <div className={styles.squareArea}>
             <span className={styles.measureTop}>1dm</span>
@@ -66,7 +67,7 @@ const Liter = () => {
           />
 
           <p>
-            Now let's set the height, width, and depth to 1 decimeter or 1dm
+            Now let&apos;s set the height, width, and depth to 1 decimeter or 1dm
             <sup>3</sup>.
           </p>
           <Cube height="128px" />
@@ -81,7 +82,7 @@ const Liter = () => {
           <table className="table">
             <thead>
               <tr>
-                <th colspan="2">Amount</th>
+                <th colSpan="2">Amount</th>
                 <th>Prefix</th>
                 <th>Measure</th>
                 <th>Abbreviation</th>
@@ -157,10 +158,10 @@ const Liter = () => {
             Great job!
             <br />
             <br />
-            Now I'm curious how much does this liter way.
+            Now I&apos;m curious how much does this liter way.
           </p>
           <Link href="/ametrica/gram">
-            <a>Time weigh in</a>
+            <a>Time to weigh in</a>
           </Link>
         </article>
       </section>

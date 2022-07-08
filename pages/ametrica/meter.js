@@ -27,7 +27,7 @@ const Meter = () => {
           <p>
             This <i>ruler</i> is arbitrary for now. It is some random fixed
             width for the moment with several equally spaced lines. We need to
-            name our ruler so it is not confused with anything else. Let us use
+            name our ruler so it is not confused with anything else. Let&apos;s use
             ...
           </p>
           <MediaBox>
@@ -38,7 +38,7 @@ const Meter = () => {
             </p>
           </MediaBox>
           <p>
-            Ok, now we have a name and some set length. We are all set! Let us
+            Ok, now we have a name and some set length. We are all set! Let&apos;s
             put it use. For our first experiment we can measure our hand 🖐.
           </p>
           <p>
@@ -47,9 +47,9 @@ const Meter = () => {
             smaller peices. <br /> 🤔 <br />
           </p>
           <p>
-            Let us see if cutting into smaller pieces fixes this issue. Let us
+            Let&apos;s see if cutting into smaller pieces fixes this issue. Let&apos;s
             try 100 sections, and since we already started with a classic
-            language let us continue. We chose Greek for our whole measure let
+            language let&apos;s continue. We chose Greek for our whole measure let
             us use Latin for our fractional units so we can tell the difference
             if we are using smaller units or whole units. Do not over think the
             naming. 100 in Latin is <i>Centum</i>. With a little conjugation we
@@ -66,7 +66,7 @@ const Meter = () => {
             event more.
             <br />
             <br />
-            Let us add another 0 and try 1000. Using the same method as before
+            Let&apos;s add another 0 and try 1000. Using the same method as before
             1000 in Latin is Milli. Adding our ruler name we have{" "}
             <i>Millimeter</i>
           </p>
@@ -75,8 +75,8 @@ const Meter = () => {
           />
           <p>
             That gives us more accuracy. The hand we measured comes to 19.3cm or
-            193 millimeters (193mm). With this success let us set our sites on
-            something longer like ourselves. Let us measure our height. Ok, now
+            193 millimeters (193mm). With this success let&apos;s set our sites on
+            something longer like ourselves. Let&apos;s measure our height. Ok, now
             we have a different problem. Our ruler is not large enough so we
             have to use more than one ruler.
           </p>
@@ -100,7 +100,7 @@ const Meter = () => {
             simple and practical just like our system for currency.
           </p>
           <p>
-            We should try one last thing. Measuring a great distance. Let us
+            We should try one last thing. Measuring a great distance. Let&apos;s
             measure how far we are from our favorite restaurant.
             <br />
             <br />
@@ -138,7 +138,7 @@ const Meter = () => {
           <table className="table">
             <thead>
               <tr>
-                <th colspan="2">Amount</th>
+                <th colSpan="2">Amount</th>
                 <th>Prefix</th>
                 <th>Measure</th>
                 <th>Abbreviation</th>
