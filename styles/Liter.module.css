@@ -1,0 +1,26 @@
+.squareArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 88px));
+  grid-template-rows: repeat(auto-fit, minmax(50px, 50px));
+  grid-template-areas:
+    "tm ."
+    "f sm";
+  align-items: center;
+}
+
+.measureTop {
+  grid-area: tm;
+}
+
+.measureSide {
+  grid-area: sm;
+  writing-mode: vertical-rl;
+}
+
+.square {
+  grid-area: f;
+  height: 128px;
+  width: 128px;
+  border: solid 5px black;
+  border-radius: 3px;
+}

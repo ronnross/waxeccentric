@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MeterStick from "../../components/MeterStick";
 import MediaBox from "../../components/MediaBox";
+import Link from "next/link";
 
 const Meter = () => {
   return (
@@ -119,7 +120,6 @@ const Meter = () => {
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
           />
-          
           <p>
             Oh wow! It took me 1,100 sticks. What about you?
             <br />
@@ -163,9 +163,12 @@ const Meter = () => {
             Ok, I&apos;m tired of measuring all that. I think I need a drink.
             Perhaps we can use what we created to measure our beverage.
           </p>
-          <button className="Button" type="button">
+          <Link href="/ametrica/liter">
+            <a>Time to measure liquids!!!</a>
+          </Link>
+          {/* <button className="Button" type="button">
             Coming soon. Time to measure liquids!!!
-          </button>
+          </button> */}
         </article>
       </section>
     </>
