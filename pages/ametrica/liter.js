@@ -72,8 +72,8 @@ const Liter = () => {
           </p>
           <Cube height="128px" />
           <p>
-            That will work. Now for a name. We can pull an old measure name of
-            the Greek acheives. How about litra or for us a liter. Almost Done!
+            That will work. Now for a name. We can pull an old measure name from
+            the Greek archives. How about litra or for us a liter. We are nearly finished.
             <br />
             <br />
             Now we can apply our pattern from the meter.
@@ -158,7 +158,7 @@ const Liter = () => {
             Great job!
             <br />
             <br />
-            Now I&apos;m curious how much does this liter way.
+            Now I&apos;m curious how much does this liter weigh?
           </p>
           <Link href="/ametrica/gram">
             <a>Time to weigh in</a>
