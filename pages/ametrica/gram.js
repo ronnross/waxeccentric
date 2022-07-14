@@ -114,7 +114,7 @@ const Gram = () => {
             for larger weights this error could compound. So if we are going to do
             it. let&apos;s do it right. and for that we need a tempature system. 
           </p>
-          <Link href="/ametrica/celcius">
+          <Link href="/ametrica/Celsius">
             <a>Let&apos;s measure tempature!</a>
           </Link>
         </article>
