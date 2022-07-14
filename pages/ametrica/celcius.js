@@ -1,19 +1,19 @@
 import Head from "next/head";
 import Link from "next/link";
 
-const Celcius = () => {
+const Celsius = () => {
   return (
     <>
       <Head>
-        <title>Ametrica | Celcius</title>
-        <meta name="keywords" content="Celcius" />
+        <title>Ametrica | Celsius</title>
+        <meta name="keywords" content="Celsius" />
       </Head>
       <section name="meter">
         <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
         <article className="Section__article">
-          <h2 className="Heading__title">Celcius</h2>
+          <h2 className="Heading__title">Celsius</h2>
 
           <p>
             We are using water as the source for the liter and gram. Why not use
@@ -68,7 +68,7 @@ const Celcius = () => {
           <p>
             Finally, for the name of this system. Here is where we will take a
             detour from our method of naming and name it after a person Anders
-            Celcius. By going with Celcius and not a more general Greek term for
+            Celsius. By going with Celsius and not a more general Greek term for
             tempature, we can avoid confusion with another tempature system we
             might need for something else; like measuring absolute zero.
           </p>
@@ -78,4 +78,4 @@ const Celcius = () => {
   );
 };
 
-export default Celcius;
+export default Celsius;
