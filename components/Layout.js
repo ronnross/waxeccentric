@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Head from "next/head";
 
 const Layout = ({ children }) => {
@@ -11,7 +12,7 @@ const Layout = ({ children }) => {
       </Head>
       <Navbar />
       {children}
-      <footer>Wax Eccentric </footer>
+      <Footer />
     </div>
   );
 };
