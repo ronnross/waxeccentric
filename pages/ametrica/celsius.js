@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import MediaBox from "../../components/MediaBox";
 
 const Celsius = () => {
   return (
@@ -34,16 +35,21 @@ const Celsius = () => {
           </p>
           <p>
             We could work this into a little poem to make it easy to remember:
-            <br />
-            30 is hot.
-            <br />
-            20 is pleasing.
-            <br />
-            10 is cold
-            <br />
-            0 is freezing
-            <br />
           </p>
+
+          <MediaBox>
+            <p>
+              30 is hot.
+              <br />
+              20 is pleasing.
+              <br />
+              10 is cold
+              <br />
+              0 is freezing
+              <br />
+            </p>
+          </MediaBox>
+
           <p>
             Ok I understand that some of this is preference and one might were a
             jacket while another opts for short sleeves, but this is a good rule
@@ -61,9 +67,9 @@ const Celsius = () => {
             <Link href="/ametrica/gram">
               <a>Gram</a>
             </Link>{" "}
-            that water&apos;s weight changes in different tempatures. We can find
-            which tempature water is at its most dense and us that for our gram.
-            Turns out it is 4°. Now we can build scales!
+            that water&apos;s weight changes in different tempatures. We can
+            find which tempature water is at its most dense and us that for our
+            gram. Turns out it is 4°. Now we can build scales!
           </p>
           <p>
             Finally, for the name of this system. Here is where we will take a
