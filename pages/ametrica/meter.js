@@ -72,6 +72,7 @@ const Meter = () => {
           </p>
           <MeterStick
             units={["1", "2", "3", "4", "...", "997", "998", "999", "1000"]}
+            graduations="millimeter"
           />
           <p>
             That gives us more accuracy. The hand we measured comes to 19.3cm or
@@ -109,16 +110,20 @@ const Meter = () => {
           </p>
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+            graduations="millimeter"
           />
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+            graduations="millimeter"
           />
           ...
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+            graduations="millimeter"
           />
           <MeterStick
             units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+            graduations="millimeter"
           />
           <p>
             Oh wow! It took me 1,100 sticks. What about you?

@@ -1,6 +1,6 @@
 import styles from "../styles/MeterStick.module.css";
 
-const Centimeter = ({ num }) => (
+const Millimeters = ({ num }) => (
   <li className={styles.stick}>
     <ul className={styles.minorStickContainer}>
       <li className={styles.minorStick}></li>
@@ -19,12 +19,25 @@ const Centimeter = ({ num }) => (
   </li>
 );
 
-const MeterStick = ({ units = ["1"] }) => {
+const Centimeter = ({ num }) => (
+  <li className={styles.stick}>
+    <span className={styles.stickValue}>{num}</span>
+  </li>
+);
+
+const MeterStick = ({ units = ["1"], graduations = "centimeter" }) => {
+  console.log('////// ', graduations)
+  const Graduation = ({ ticks }) =>
+    (graduations === "centimeter" ? (
+      <Centimeter key={ticks} num={ticks} />
+    ) : (
+      <Millimeters key={ticks} num={ticks} />
+    ));
   return (
     <div className={styles.ruler}>
       <ul className={styles.stickContainer}>
         {units.map((x) => (
-          <Centimeter key={x} num={x} />
+          <Graduation ticks={x} />
         ))}
       </ul>
     </div>
