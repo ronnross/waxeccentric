@@ -26,18 +26,18 @@ const Centimeter = ({ num }) => (
 );
 
 const MeterStick = ({ units = ["1"], graduations = "centimeter" }) => {
-  console.log('////// ', graduations)
+  console.log("////// ", graduations);
   const Graduation = ({ ticks }) =>
-    (graduations === "centimeter" ? (
+    graduations === "centimeter" ? (
       <Centimeter key={ticks} num={ticks} />
     ) : (
       <Millimeters key={ticks} num={ticks} />
-    ));
+    );
   return (
     <div className={styles.ruler}>
       <ul className={styles.stickContainer}>
         {units.map((x) => (
-          <Graduation ticks={x} />
+          <Graduation key={x} ticks={x} />
         ))}
       </ul>
     </div>
