@@ -26,7 +26,6 @@ const Centimeter = ({ num }) => (
 );
 
 const MeterStick = ({ units = ["1"], graduations = "centimeter" }) => {
-  console.log("////// ", graduations);
   const Graduation = ({ ticks }) =>
     graduations === "centimeter" ? (
       <Centimeter key={ticks} num={ticks} />

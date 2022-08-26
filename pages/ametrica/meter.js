@@ -20,7 +20,7 @@ const Meter = () => {
             Everyone needs to measure things. Perhaps we should measure together
             with a common system. This system should have a high emphasis on
             being practical and simple. Maybe the easiest way to get started is
-            with distance. We need something as a base for our length. What
+            with distance. We need a place to start for measuring length. What
             about this?
           </p>
           <MeterStick units={["0", "1"]} />
