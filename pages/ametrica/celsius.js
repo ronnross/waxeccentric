@@ -18,8 +18,8 @@ const Celsius = () => {
 
           <p>
             We are using water as the source for the liter and gram. Why not use
-            it for our tempature scale. When it come to water we are often
-            concerned with two tempatures, freezing and boiling point.
+            it for our tempature scale. When it comes to water we are often
+            concerned with two tempatures, the freezing and boiling point.
             <br />
             <br />
             What if we set 0 as the freezing point of water. Then set 100 as the
@@ -51,10 +51,10 @@ const Celsius = () => {
           </MediaBox>
 
           <p>
-            Ok I understand that some of this is preference and one might were a
-            jacket while another opts for short sleeves, but this is a good rule
-            of thumb. As we live with the system we will get an understanding of
-            our personal preferences.
+            Ok I understand that some of this is preference and one might wear a
+            jacket while another just chooses long sleeves, but this can be a
+            good rule of thumb. As we live with the system we will get an
+            understanding of our personal preferences and adjust accordingly.
           </p>
           <p>
             Some other temps we might want to remember. <br />
@@ -69,7 +69,7 @@ const Celsius = () => {
             </Link>{" "}
             that water&apos;s weight changes in different tempatures. We can
             find which tempature water is at its most dense and us that for our
-            gram. Turns out it is 4°. Now we can build scales!
+            gram. Turns out it is <i>4°</i>. Now we can build scales!
           </p>
           <p>
             Finally, for the name of this system. Here is where we will take a
@@ -78,6 +78,19 @@ const Celsius = () => {
             tempature, we can avoid confusion with another tempature system we
             might need for something else; like measuring absolute zero.
           </p>
+          <p>
+            This has been great fun. We create a system that is extremely
+            practical. I would say we can continue to create things, but there
+            is no need. The system I speak of already exist and ready to be
+            used. It already has the measures we worked through and more.
+            <br />
+            <br />
+            Sadly, the US has lagged behind our peers in fully embracing the
+            system. Would you like to know more about our transition? 
+          </p>
+          <Link href="/ametrica/metrification">
+            <a>How we can move faster</a>
+          </Link>
         </article>
       </section>
     </>

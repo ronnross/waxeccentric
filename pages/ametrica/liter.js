@@ -67,13 +67,15 @@ const Liter = () => {
           />
 
           <p>
-            Now let&apos;s set the height, width, and depth to 1 decimeter or 1dm
+            Now let&apos;s set the height, width, and depth to 1 decimeter or
+            1dm
             <sup>3</sup>.
           </p>
           <Cube height="128px" />
           <p>
             That will work. Now for a name. We can pull an old measure name from
-            the Greek archives. How about litra or for us a liter. We are nearly finished.
+            the Greek archives. How about an old Greek measure no longer in use;
+            litra or for us a liter. We are nearly finished.
             <br />
             <br />
             Now we can apply our pattern from the meter.
@@ -156,6 +158,11 @@ const Liter = () => {
           </table>
           <p>
             Great job!
+            <br />
+            <br />
+            The really interesting part of this is the relationship between the
+            meter. I imagine if we keep building off one another this relationship
+            will prove helpful.
             <br />
             <br />
             Now I&apos;m curious how much does this liter weigh?
