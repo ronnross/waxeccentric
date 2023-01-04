@@ -95,9 +95,9 @@ const Celsius = () => {
               <Image src="/celsius_scale.png" width={125} height={450} />
             </a>
           </p>
-          <Link href="/ametrica/metrification">
+          {/* <Link href="/ametrica/metrification">
             <a>How we can move faster</a>
-          </Link>
+          </Link> */}
         </article>
       </section>
     </>
