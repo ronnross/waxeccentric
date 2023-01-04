@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import MediaBox from "../../components/MediaBox";
 
 const Celsius = () => {
@@ -68,7 +69,7 @@ const Celsius = () => {
               <a>Gram</a>
             </Link>{" "}
             that water&apos;s weight changes in different tempatures. We can
-            find which tempature water is at its most dense and us that for our
+            find which tempature water is at its most dense and use that for our
             gram. Turns out it is <i>4°</i>. Now we can build scales!
           </p>
           <p>
@@ -86,7 +87,13 @@ const Celsius = () => {
             <br />
             <br />
             Sadly, the US has lagged behind our peers in fully embracing the
-            system. Would you like to know more about our transition? 
+            system. Would you like to know more about our transition?
+          </p>
+          <p>
+            Perhaps this chart will help: <br />
+            <a href="">
+              <Image src="/celsius_scale.png" width={125} height={450} />
+            </a>
           </p>
           <Link href="/ametrica/metrification">
             <a>How we can move faster</a>
