@@ -1,6 +1,7 @@
 import Head from "next/head";
 import MeterStick from "../../components/MeterStick";
 import MediaBox from "../../components/MediaBox";
+import NavList from "../../components/NavList";
 import Link from "next/link";
 
 const Meter = () => {
@@ -14,6 +15,7 @@ const Meter = () => {
         <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
+        <NavList />
         <article className="Section__article">
           <h2 className="Heading__title">Simple and Practical.</h2>
           <p>

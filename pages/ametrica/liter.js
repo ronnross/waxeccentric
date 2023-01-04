@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "../../styles/Liter.module.css";
 import MeterStick from "../../components/MeterStick";
 import Cube from "../../components/Cube";
+import NavList from "../../components/NavList";
+
 import Link from "next/link";
 
 const Liter = () => {
@@ -15,6 +17,7 @@ const Liter = () => {
         <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
+        <NavList />
         <article className="Section__article">
           <h2 className="Heading__title">Building upon what we have.</h2>
           <p>
@@ -161,8 +164,8 @@ const Liter = () => {
             <br />
             <br />
             The really interesting part of this is the relationship between the
-            meter. I imagine if we keep building off one another this relationship
-            will prove helpful.
+            meter. I imagine if we keep building off one another this
+            relationship will prove helpful.
             <br />
             <br />
             Now I&apos;m curious how much does this liter weigh?

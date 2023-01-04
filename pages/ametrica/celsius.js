@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import MediaBox from "../../components/MediaBox";
+import NavList from "../../components/NavList";
+
 
 const Celsius = () => {
   return (
@@ -14,6 +16,7 @@ const Celsius = () => {
         <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
+        <NavList />
         <article className="Section__article">
           <h2 className="Heading__title">Celsius</h2>
 
@@ -67,7 +70,7 @@ const Celsius = () => {
             We metioned in the section defining the{" "}
             <Link href="/ametrica/gram">
               <a>Gram</a>
-            </Link>{" "}
+            </Link>
             that water&apos;s weight changes in different tempatures. We can
             find which tempature water is at its most dense and use that for our
             gram. Turns out it is <i>4°</i>. Now we can build scales!

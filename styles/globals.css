@@ -83,7 +83,7 @@ table, td, th {
     font-size: 20px;
     line-height: 30px;
     background-color: var(--white);
-    padding: 3.75rem;
+    padding: 1rem 3.75rem;
     box-shadow: 8px 8px 0 rgba(32, 33, 37, 0.1);
     border-radius: Max(
         0px,

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import NavList from "../../components/NavList";
 
 const Gram = () => {
   return (
@@ -12,6 +13,7 @@ const Gram = () => {
         <h1 className="Heading__title pl-4">
           Ame<span className="blue">(t)</span>rica
         </h1>
+        <NavList />
         <article className="Section__article">
           <h2 className="Heading__title">Gram</h2>
           <p>

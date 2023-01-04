@@ -1,0 +1,9 @@
+.navList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
