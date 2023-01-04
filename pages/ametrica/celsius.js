@@ -95,7 +95,7 @@ const Celsius = () => {
           <p>
             Perhaps this chart will help: <br />
             <a href="">
-              <Image src="/celsius_scale.png" width={125} height={450} />
+              <Image src="/celsius_scale.png" width={125} height={450} alt="temp scale" />
             </a>
           </p>
           {/* <Link href="/ametrica/metrification">
