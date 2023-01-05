@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import MediaBox from "../../components/MediaBox";
+import MediaBox from "../../../components/MediaBox";
 
 const Metrification = () => {
   return (

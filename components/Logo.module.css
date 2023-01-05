@@ -1,0 +1,43 @@
+.logo {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia,
+    serif;
+  height: 8px;
+  line-height: 16px;
+  position: relative;
+  background-color: red;
+}
+
+.logo > a {
+  color: #d5ad6d; /*if no support for background-clip*/
+  background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top, rgba(213, 173, 109, 1) 0%, rgba(
+            213,
+            173,
+            109,
+            1
+          )
+          26%, rgba(226, 186, 120, 1) 35%, rgba(163, 126, 67, 1) 45%, rgba(
+            145,
+            112,
+            59,
+            1
+          )
+          61%, rgba(213, 173, 109, 1) 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lefty {
+  float: left;
+  transform: rotate(-5deg);
+  color: #d5ad6d;
+  text-shadow: 0 -1px 0 #243350, 0 1px 0 #def2fe;
+}
+
+.righty {
+  float: left;
+  transform: rotate(4deg);
+  color: #d5ad6d;
+  text-shadow: 0 -1px 0 #243350, 0 1px 0 #def2fe;
+}

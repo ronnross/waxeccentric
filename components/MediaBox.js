@@ -1,5 +1,4 @@
-import styles from "../styles/MediaBox.module.css";
-import Image from "next/image";
+import styles from "./MediaBox.module.css";
 
 const MediaBox = ({ children }) => (
   <div className={styles.mediaBox}>

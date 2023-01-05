@@ -1,4 +1,4 @@
-import styles from "../styles/MeterStick.module.css";
+import styles from "./MeterStick.module.css";
 
 const Millimeters = ({ num }) => (
   <li className={styles.stick}>

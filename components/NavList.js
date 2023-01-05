@@ -1,12 +1,12 @@
 import Link from "next/link";
-import styles from "../styles/NavList.module.css";
+import styles from "./NavList.module.css";
 
 const NavList = () => {
   return (
     <nav>
         <ul className={styles.navList}>
             <li>
-                <Link href="/ametrica/meter">Meter</Link>
+                <Link href="/ametrica">Meter</Link>
             </li>
             <li>
                 <Link href="/ametrica/gram">Gram</Link>

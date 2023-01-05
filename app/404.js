@@ -6,10 +6,7 @@ const NotFound = () => {
       <h1>Ooooops...</h1>
       <h2>That page cannot be found.</h2>
       <p>
-        Go back to the{" "}
-        <Link href="/">
-          <a>Home</a>
-        </Link>
+        Go back to the <Link href="/">Home</Link>
       </p>
     </div>
   );
