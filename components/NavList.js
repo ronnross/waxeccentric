@@ -9,10 +9,10 @@ const NavList = () => {
                 <Link href="/ametrica">Meter</Link>
             </li>
             <li>
-                <Link href="/ametrica/gram">Gram</Link>
+                <Link href="/ametrica/liter">Liter</Link>
             </li>
             <li>
-                <Link href="/ametrica/liter">Liter</Link>
+                <Link href="/ametrica/gram">Gram</Link>
             </li>
             <li>
                 <Link href="/ametrica/celsius">Celsius</Link>

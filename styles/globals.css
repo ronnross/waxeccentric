@@ -61,9 +61,7 @@ th {
   margin-right: auto;
   max-width: 800px;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+
 }
 
 .Section__article {

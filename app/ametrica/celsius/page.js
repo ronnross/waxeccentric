@@ -56,10 +56,10 @@ const Celsius = () => {
         </p>
         <p>
           We metioned in the section defining the{" "}
-          <Link href="/ametrica/gram">Gram</Link>
-          that water&apos;s weight changes in different tempatures. We can find
-          which tempature water is at its most dense and use that for our gram.
-          Turns out it is <i>4°</i>. Now we can build scales!
+          <Link href="/ametrica/gram">Gram</Link> that water&apos;s weight
+          changes in different tempatures. We can find which tempature water is
+          at its most dense and use that for our gram. Turns out it is <i>4°</i>
+          . Now we can build scales!
         </p>
         <p>
           Finally, for the name of this system. Here is where we will take a
