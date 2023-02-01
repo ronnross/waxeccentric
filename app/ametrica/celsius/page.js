@@ -14,9 +14,9 @@ const Celsius = () => {
           concerned with two tempatures, the freezing and boiling point.
           <br />
           <br />
-          What if we set 0 as the freezing point of water. Then set 100 as the
-          boiling point of water? Then we have 100 units or degrees(°) to work
-          with. This is keeping with our theme of being practical. After testing
+          What if we set 0 as the freezing point of water? Then set 100 as the
+          boiling point of water. We can divide our scale into 100 units or degrees(°). 
+          This is keeping with our theme of being practical. After testing
           this scale in different tempatures in between freezing and boiling a
           nice pattern emerges.
           <br />
@@ -44,9 +44,9 @@ const Celsius = () => {
 
         <p>
           Ok I understand that some of this is preference and one might wear a
-          jacket while another just chooses long sleeves, but this can be a good
+          jacket while another might choose long sleeves, but this can be a good
           rule of thumb. As we live with the system we will get an understanding
-          of our personal preferences and adjust accordingly.
+          of our personal preference.
         </p>
         <p>
           Some other temps we might want to remember. <br />
@@ -69,8 +69,8 @@ const Celsius = () => {
           might need for something else; like measuring absolute zero.
         </p>
         <p>
-          This has been great fun. We create a system that is extremely
-          practical. I would say we can continue to create things, but there is
+          This has been great fun. We have created a system that is extremely
+          practical. I would say we could continue to create things, but there is
           no need. The system I speak of already exist and ready to be used. It
           already has the measures we worked through and more.
           <br />

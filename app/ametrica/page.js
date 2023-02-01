@@ -61,7 +61,7 @@ const Meter = () => {
           <i>Millimeter</i>
         </p>
         <MeterStick
-          units={["1", "2", "3", "4", "...", "997", "998", "999", "1000"]}
+          units={["1", "20", "30", "40", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
         />
         <p>
