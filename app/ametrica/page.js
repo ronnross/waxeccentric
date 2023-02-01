@@ -99,20 +99,16 @@ const Meter = () => {
           until I reach my destination.
         </p>
         <MeterStick
-          units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+          units={["1", "20", "30", "40", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        />
-        <MeterStick
-          units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+        /><MeterStick
+          units={["1", "20", "30", "40", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        />
-        ...
-        <MeterStick
-          units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+        /><MeterStick
+          units={["1", "20", "30", "40", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        />
-        <MeterStick
-          units={["1", "2", "3", "4", "...", "97", "98", "99", "100"]}
+        /><MeterStick
+          units={["1", "20", "30", "40", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
         />
         <p>
