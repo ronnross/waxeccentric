@@ -2,6 +2,8 @@ const Cube = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512"
+    aria-hidden="true"
+    focusable="false"
     style={{
       enableBackground: "new 0 0 512 512",
     }}

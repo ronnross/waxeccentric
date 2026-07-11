@@ -1,6 +1,6 @@
-import MeterStick from "../../components/MeterStick";
-import MediaBox from "../../components/MediaBox";
 import Link from "next/link";
+import MediaBox from "../../components/MediaBox";
+import MeterStick from "../../components/MeterStick";
 
 const Meter = () => {
   return (
@@ -101,13 +101,16 @@ const Meter = () => {
         <MeterStick
           units={["1", "10", "20", "30", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        /><MeterStick
+        />
+        <MeterStick
           units={["1", "10", "20", "30", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        /><MeterStick
+        />
+        <MeterStick
           units={["1", "10", "20", "30", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
-        /><MeterStick
+        />
+        <MeterStick
           units={["1", "10", "20", "30", "...", "970", "980", "990", "1000"]}
           graduations="millimeter"
         />

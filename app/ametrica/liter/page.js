@@ -1,8 +1,7 @@
-import styles from "./Liter.module.css";
-import MeterStick from "../../../components/MeterStick";
-import Cube from "../../../components/Cube";
-
 import Link from "next/link";
+import Cube from "../../../components/Cube";
+import MeterStick from "../../../components/MeterStick";
+import styles from "./Liter.module.css";
 
 const Liter = () => {
   return (
@@ -23,8 +22,7 @@ const Liter = () => {
           My first thought is we can build a box 1m wide, 1m deep, and 1m tall
           (1m<sup>3</sup>).
           <br />
-          <br />
-          🚨 Wait!
+          <br />🚨 Wait!
           <br />
           <br />
           Without even constructing the box I can tell that is going to be a lot

@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import MediaBox from "../../../components/MediaBox";
 
 const Metrification = () => {
   return (
@@ -17,8 +15,6 @@ const Metrification = () => {
           <h2 className="Heading__title">Metrification of US</h2>
 
           <p>Currently working away.</p>
-
-         
         </article>
       </section>
     </>

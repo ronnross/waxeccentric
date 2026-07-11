@@ -1,7 +1,3 @@
 export default function Head() {
-  return (
-    <>
-      <title>Ametrica | Liter</title>
-    </>
-  );
+  return <title>Ametrica | Liter</title>;
 }

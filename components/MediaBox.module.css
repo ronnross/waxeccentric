@@ -18,7 +18,8 @@
 .imageArea {
   background-color: #ffcc00;
   opacity: 0.8;
-  background-image: linear-gradient(#edc070 1px, transparent 1px),
+  background-image:
+    linear-gradient(#edc070 1px, transparent 1px),
     linear-gradient(to right, #edc070 1px, #ffcc00 1px);
   background-size: 20px 20px;
   border-top-right-radius: 8px;

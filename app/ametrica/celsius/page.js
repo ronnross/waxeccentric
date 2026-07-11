@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import MediaBox from "../../../components/MediaBox";
 
 const Celsius = () => {
@@ -15,10 +15,10 @@ const Celsius = () => {
           <br />
           <br />
           What if we set 0 as the freezing point of water? Then set 100 as the
-          boiling point of water. We can divide our scale into 100 units or degrees(°). 
-          This is keeping with our theme of being practical. After testing
-          this scale in different tempatures in between freezing and boiling a
-          nice pattern emerges.
+          boiling point of water. We can divide our scale into 100 units or
+          degrees(°). This is keeping with our theme of being practical. After
+          testing this scale in different tempatures in between freezing and
+          boiling a nice pattern emerges.
           <br />
           starting at 0 and moving to 10 is cold and coat weather.
           <br />
@@ -36,8 +36,7 @@ const Celsius = () => {
             20 is pleasing.
             <br />
             10 is cold
-            <br />
-            0 is freezing
+            <br />0 is freezing
             <br />
           </p>
         </MediaBox>
@@ -70,9 +69,9 @@ const Celsius = () => {
         </p>
         <p>
           This has been great fun. We have created a system that is extremely
-          practical. I would say we could continue to create things, but there is
-          no need. The system I speak of already exist and ready to be used. It
-          already has the measures we worked through and more.
+          practical. I would say we could continue to create things, but there
+          is no need. The system I speak of already exist and ready to be used.
+          It already has the measures we worked through and more.
           <br />
           <br />
           Sadly, the US has lagged behind our peers in fully embracing the
@@ -80,14 +79,12 @@ const Celsius = () => {
         </p>
         <p>
           Perhaps this chart will help: <br />
-          <a href="">
-            <Image
-              src="/celsius_scale.png"
-              width={125}
-              height={450}
-              alt="temp scale"
-            />
-          </a>
+          <Image
+            src="/celsius_scale.png"
+            width={125}
+            height={450}
+            alt="temp scale"
+          />
         </p>
         {/* <Link href="/ametrica/metrification">
             How we can move faster
