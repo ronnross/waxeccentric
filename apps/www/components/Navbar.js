@@ -5,15 +5,11 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <header className={styles.navbar}>
-      <div>
-        <h1>
-          <Logo />
-        </h1>
-      </div>
+      <Logo />
 
-      <nav>
-        <Link href="/">Home</Link> &nbsp; | &nbsp;
-        <Link href="/ametrica">Ametrica</Link> &nbsp; | &nbsp;
+      <nav className={styles.navLinks} aria-label="Primary navigation">
+        <Link href="/">Home</Link>
+        <Link href="/ametrica">Ametrica</Link>
         <a href="/verse/">Verse</a>
       </nav>
     </header>

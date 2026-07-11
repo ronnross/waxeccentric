@@ -1,42 +1,48 @@
 .logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid rgba(255, 218, 157, 0.26);
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%, 0 28%);
   font-family:
     TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  height: 8px;
-  line-height: 16px;
+  font-size: 1.45rem;
+  line-height: 1;
+  text-decoration: none;
   position: relative;
-  background-color: red;
-}
-
-.logo > a {
-  color: #d5ad6d; /*if no support for background-clip*/
+  color: var(--paper);
   background:
-    -webkit-linear-gradient(transparent, transparent),
-    -webkit-linear-gradient(
-      top,
-      rgba(213, 173, 109, 1) 0%,
-      rgba(213, 173, 109, 1) 26%,
-      rgba(226, 186, 120, 1) 35%,
-      rgba(163, 126, 67, 1) 45%,
-      rgba(145, 112, 59, 1) 61%,
-      rgba(213, 173, 109, 1) 100%
-    );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    linear-gradient(
+      90deg,
+      transparent 47%,
+      rgba(255, 218, 157, 0.3) 47% 53%,
+      transparent 53%
+    ),
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(255, 215, 137, 0.18),
+      transparent 42%
+    ),
+    rgba(255, 225, 171, 0.08);
+  box-shadow:
+    inset 0 0 24px rgba(242, 180, 95, 0.16),
+    0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
 .lefty {
-  float: left;
   transform: rotate(-5deg);
-  color: #d5ad6d;
+  color: var(--accent-gold);
   text-shadow:
     0 -1px 0 #243350,
     0 1px 0 #def2fe;
 }
 
 .righty {
-  float: left;
   transform: rotate(4deg);
-  color: #d5ad6d;
+  color: var(--candle);
   text-shadow:
     0 -1px 0 #243350,
     0 1px 0 #def2fe;

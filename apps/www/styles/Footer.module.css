@@ -1,4 +1,10 @@
 .footer {
-  margin: 3rem;
-  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 5vw, 4rem) 3rem;
+  color: rgba(255, 231, 185, 0.62);
+  border-top: 1px solid rgba(255, 218, 157, 0.14);
 }
