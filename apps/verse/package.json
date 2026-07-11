@@ -1,0 +1,8 @@
+{
+  "name": "@waxeccentric/verse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf out && mkdir -p out && cp index.html poems.js script.js style.css out/"
+  }
+}

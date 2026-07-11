@@ -11,6 +11,8 @@
     "build": "turbo build",
     "start": "turbo start --filter=@waxeccentric/www",
     "deploy": "./scripts/deploy.sh",
+    "preview:build": "./scripts/preview-build.sh",
+    "preview": "./scripts/preview.sh",
     "typecheck": "turbo typecheck",
     "lint": "biome lint .",
     "check": "biome check . && turbo typecheck",

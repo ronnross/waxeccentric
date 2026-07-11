@@ -1,0 +1,339 @@
+:root {
+  --highlight-color: #c9a84c;
+  --expanded-bg: #ecdcb4;
+  --text-color: #3a2b1a;
+  --bg-color: #ded0a8;
+  --ink: #3a2414;
+  --gold: #8a6d3b;
+  --meander: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16' viewBox='0 0 40 16'%3E%3Cpath d='M0 8h8V2h8v6h8V2h8v6h8' fill='none' stroke='%233a2414' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  color: var(--text-color);
+  line-height: 1.65;
+  background-color: var(--bg-color);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(90, 62, 30, 0.05) 0px,
+      transparent 1.5px,
+      transparent 5px
+    ),
+    radial-gradient(
+      ellipse at 10% 0%,
+      rgba(90, 62, 30, 0.18) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 95% 100%,
+      rgba(90, 62, 30, 0.16) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 50% 50%,
+      transparent 55%,
+      rgba(58, 36, 20, 0.22) 100%
+    );
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  max-width: 800px;
+  margin: 0;
+  padding: 2rem 2rem 4rem;
+  flex: 1;
+  min-width: 0;
+  background: rgba(243, 230, 194, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(90, 62, 30, 0.15),
+    0 4px 18px rgba(58, 36, 20, 0.15);
+  border-radius: 4px / 8px;
+}
+
+main::before,
+main::after,
+.index::before,
+.index::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      var(--bg-color) 0 6px,
+      transparent 6px 12px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      var(--bg-color) 0 6px,
+      transparent 6px 12px
+    );
+  background-size: 12px 12px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+
+main::before,
+.index::before {
+  top: -5px;
+}
+
+main::after,
+.index::after {
+  bottom: -5px;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.index {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 2.5rem;
+  padding: 2rem 1.25rem;
+  background: rgba(243, 230, 194, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(90, 62, 30, 0.15),
+    0 4px 18px rgba(58, 36, 20, 0.15);
+  border-radius: 4px / 8px;
+}
+
+.index h2 {
+  font-family: "Cinzel", "EB Garamond", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+
+.index h2::after {
+  content: "";
+  display: block;
+  height: 16px;
+  margin-top: 0.6rem;
+  background-image: var(--meander);
+  background-repeat: repeat-x;
+  background-size: 20px 8px;
+  opacity: 0.6;
+}
+
+.poem-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.poem-index li {
+  margin-bottom: 0.5rem;
+}
+
+.poem-index-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.poem-index-link:hover,
+.poem-index-link:focus {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.poem-index-link.active {
+  color: var(--gold);
+  font-weight: 600;
+  font-style: normal;
+  border-bottom-color: var(--gold);
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  height: 16px;
+  margin: 0.75rem auto 0;
+  max-width: 320px;
+  background-image: var(--meander);
+  background-repeat: repeat-x;
+  background-size: 40px 16px;
+  opacity: 0.75;
+}
+
+.instructions {
+  font-style: italic;
+  color: #6b5a3f;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.textblock {
+  font-size: 1.1rem;
+  word-spacing: 0.05em;
+  column-count: 2;
+  column-gap: 2.5rem;
+  column-rule: 1px solid rgba(58, 36, 20, 0.18);
+}
+
+.section {
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  border-radius: 3px;
+  padding: 0.05em 0;
+}
+
+.section:hover {
+  color: #6b4a1a;
+  background-color: var(--highlight-color);
+}
+
+.section.expanded {
+  position: relative;
+  display: block;
+  column-span: all;
+  margin: 2rem 0.5rem;
+  padding: 1.75rem 2rem;
+  color: #4a3323;
+  cursor: default;
+  border-radius: 3px / 6px;
+  transform: rotate(-0.4deg);
+  background-color: #ecdcb4;
+  background-image:
+    radial-gradient(
+      ellipse at 15% 20%,
+      rgba(139, 98, 51, 0.16) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 75%,
+      rgba(139, 98, 51, 0.14) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 60% 10%,
+      rgba(90, 62, 30, 0.1) 0%,
+      transparent 40%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(90, 62, 30, 0.03) 0px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(135deg, #f3e6c2 0%, #ecdcb4 45%, #e2caa0 100%);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(90, 62, 30, 0.25),
+    inset 0 0 40px rgba(90, 62, 30, 0.25),
+    inset 0 0 90px rgba(139, 98, 51, 0.15);
+}
+
+.close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #6b4a2a;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #3a2414;
+}
+
+.section.expanded:hover {
+  background-color: #ecdcb4;
+  color: #4a3323;
+}
+
+.poem-title {
+  display: block;
+  font-family: "Cinzel", serif;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  padding-right: 1.5rem;
+  color: #3a2414;
+  letter-spacing: 0.06em;
+}
+
+.poem-title::after {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 60px;
+  margin-top: 0.5rem;
+  background-image: var(--meander);
+  background-repeat: repeat-x;
+  background-size: 20px 8px;
+  opacity: 0.55;
+}
+
+.stanza {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.drop-cap {
+  float: left;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-size: 2.8em;
+  line-height: 0.8;
+  padding: 0.05em 0.1em 0 0;
+  color: var(--gold);
+}
+
+.section.expanded .stanza {
+  color: #4a3323;
+}
+
+.stanza:last-child {
+  margin-bottom: 0;
+}

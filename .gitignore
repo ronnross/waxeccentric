@@ -14,6 +14,7 @@
 /apps/*/.next/
 /apps/*/out/
 .turbo/
+.local-preview/
 *.tsbuildinfo
 
 # production
