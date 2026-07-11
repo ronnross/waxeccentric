@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Ametrica | Gram",
+};
+
 const Gram = () => {
   return (
     <section name="meter">

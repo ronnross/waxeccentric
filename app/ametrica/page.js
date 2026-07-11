@@ -2,6 +2,10 @@ import Link from "next/link";
 import MediaBox from "../../components/MediaBox";
 import MeterStick from "../../components/MeterStick";
 
+export const metadata = {
+  title: "Ametrica | Meter",
+};
+
 const Meter = () => {
   return (
     <section name="meter">

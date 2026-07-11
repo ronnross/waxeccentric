@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import MediaBox from "../../../components/MediaBox";
 
+export const metadata = {
+  title: "Ametrica | Celsius",
+};
+
 const Celsius = () => {
   return (
     <section name="meter">

@@ -1,23 +1,17 @@
-import Head from "next/head";
+export const metadata = {
+  title: "Ametrica | Metrification",
+  keywords: ["metrification"],
+};
 
 const Metrification = () => {
   return (
-    <>
-      <Head>
-        <title>Ametrica | Metrification</title>
-        <meta name="keywords" content="metrification" />
-      </Head>
-      <section name="metrification">
-        <h1 className="Heading__title pl-4">
-          Ame<span className="blue">(t)</span>rica
-        </h1>
-        <article className="Section__article">
-          <h2 className="Heading__title">Metrification of US</h2>
+    <section name="metrification">
+      <article className="Section__article">
+        <h2 className="Heading__title">Metrification of US</h2>
 
-          <p>Currently working away.</p>
-        </article>
-      </section>
-    </>
+        <p>Currently working away.</p>
+      </article>
+    </section>
   );
 };
 

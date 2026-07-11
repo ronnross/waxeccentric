@@ -3,6 +3,10 @@ import Cube from "../../../components/Cube";
 import MeterStick from "../../../components/MeterStick";
 import styles from "./Liter.module.css";
 
+export const metadata = {
+  title: "Ametrica | Liter",
+};
+
 const Liter = () => {
   return (
     <section name="meter">
