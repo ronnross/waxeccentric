@@ -13,7 +13,8 @@ const Navbar = () => {
 
       <nav>
         <Link href="/">Home</Link> &nbsp; | &nbsp;
-        <Link href="/ametrica">Ametrica</Link>
+        <Link href="/ametrica">Ametrica</Link> &nbsp; | &nbsp;
+        <a href="/verse/">Verse</a>
       </nav>
     </header>
   );
