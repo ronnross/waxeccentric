@@ -3,7 +3,7 @@ set -euo pipefail
 
 APP_DIR="${APP_DIR:-$HOME/apps/waxeccentric}"
 DEPLOY_DIR="${DEPLOY_DIR:-/var/www/www.waxeccentric.com/html}"
-BUILD_DIR="out"
+BUILD_DIR="apps/www/out"
 
 cd "$APP_DIR"
 git pull
