@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-APP_DIR="${APP_DIR:-$HOME/apps/waxeccentric-webapp}"
+APP_DIR="${APP_DIR:-$HOME/apps/waxeccentric}"
 DEPLOY_DIR="${DEPLOY_DIR:-/var/www/www.waxeccentric.com/html}"
 BUILD_DIR="out"
 
