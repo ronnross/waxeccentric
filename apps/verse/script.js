@@ -21,6 +21,24 @@
 let currentlyExpandedSection = null;
 const sectionsByPoemId = new Map();
 const indexLinksByPoemId = new Map();
+
+function preventTextCopy() {
+  const textblock = document.getElementById("textblock");
+  const blockedEvents = [
+    "copy",
+    "cut",
+    "contextmenu",
+    "dragstart",
+    "selectstart",
+  ];
+
+  blockedEvents.forEach((eventName) => {
+    textblock.addEventListener(eventName, (event) => {
+      event.preventDefault();
+    });
+  });
+}
+
 function flattenToBlobText(poem) {
   return poem.stanzas.map((stanza) => stanza.join(" ")).join(" ");
 }
@@ -158,4 +176,5 @@ function collapseSection(section, poem) {
 document.addEventListener("DOMContentLoaded", () => {
   renderTextblock();
   renderPoemIndex();
+  preventTextCopy();
 });

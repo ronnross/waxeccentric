@@ -19,8 +19,8 @@ export default function Home() {
           A collection of odds and ends from eccentric thinking.
         </h1>
         <p className={styles.lede}>
-          A small constellation of writing and tools: part
-          poetry, part notebook for ideas that prefer an unusual orbit.
+          A small constellation of writing and tools: part poetry, part notebook
+          for ideas that prefer an unusual orbit.
         </p>
         <div className={styles.actions}>
           <a className={styles.primaryAction} href="/ametrica">
