@@ -21,6 +21,8 @@
 let currentlyExpandedSection = null;
 const sectionsByPoemId = new Map();
 const indexLinksByPoemId = new Map();
+const poemAnimationDuration = 340;
+let transitionQueue = Promise.resolve();
 
 function preventTextCopy() {
   const textblock = document.getElementById("textblock");
@@ -59,6 +61,18 @@ function buildStanzaMarkup(poem) {
     .join("");
 }
 
+function getPoemAnimationDuration() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return 1;
+  }
+  return poemAnimationDuration;
+}
+
+function queueSectionExpansion(section, poem) {
+  transitionQueue = transitionQueue.then(() => expandSection(section, poem));
+  return transitionQueue;
+}
+
 function renderTextblock() {
   const container = document.getElementById("textblock");
   container.innerHTML = "";
@@ -75,7 +89,7 @@ function renderTextblock() {
 
     section.addEventListener("click", () => {
       if (!section.classList.contains("expanded")) {
-        expandSection(section, poem);
+        queueSectionExpansion(section, poem);
       }
     });
     section.addEventListener("keydown", (event) => {
@@ -84,7 +98,7 @@ function renderTextblock() {
         !section.classList.contains("expanded")
       ) {
         event.preventDefault();
-        expandSection(section, poem);
+        queueSectionExpansion(section, poem);
       } else if (
         event.key === "Escape" &&
         section.classList.contains("expanded")
@@ -116,25 +130,36 @@ function renderPoemIndex() {
   });
 }
 
-function openPoemFromIndex(poem) {
+async function openPoemFromIndex(poem) {
   const section = sectionsByPoemId.get(poem.id);
   if (!section) {
     return;
   }
   if (!section.classList.contains("expanded")) {
-    expandSection(section, poem);
+    await queueSectionExpansion(section, poem);
   }
   section.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
-function expandSection(section, poem) {
+async function expandSection(section, poem) {
+  if (section.classList.contains("closing")) {
+    return;
+  }
+
   if (currentlyExpandedSection && currentlyExpandedSection !== section) {
     const previousPoem = POEMS.find(
       (p) => p.id === currentlyExpandedSection.dataset.poemId,
     );
-    collapseSection(currentlyExpandedSection, previousPoem);
+    await collapseSection(currentlyExpandedSection, previousPoem, {
+      restoreFocus: false,
+    });
   }
 
+  if (section.classList.contains("expanded")) {
+    return;
+  }
+
+  section.classList.remove("closing");
   section.classList.add("expanded");
   section.setAttribute("aria-expanded", "true");
   section.innerHTML = `
@@ -156,12 +181,26 @@ function expandSection(section, poem) {
   }
 }
 
-function collapseSection(section, poem) {
-  section.classList.remove("expanded");
+function restoreCollapsedSection(section, poem, restoreFocus) {
+  section.classList.remove("expanded", "closing");
   section.setAttribute("aria-expanded", "false");
   section.innerHTML = "";
   section.textContent = `${flattenToBlobText(poem)} `;
-  section.focus();
+
+  if (restoreFocus) {
+    section.focus();
+  }
+}
+
+function collapseSection(section, poem, options = {}) {
+  const { restoreFocus = true } = options;
+
+  if (!section || !poem || section.classList.contains("closing")) {
+    return Promise.resolve();
+  }
+
+  section.classList.add("closing");
+  section.setAttribute("aria-expanded", "false");
 
   if (currentlyExpandedSection === section) {
     currentlyExpandedSection = null;
@@ -171,6 +210,13 @@ function collapseSection(section, poem) {
   if (indexLink) {
     indexLink.classList.remove("active");
   }
+
+  return new Promise((resolve) => {
+    window.setTimeout(() => {
+      restoreCollapsedSection(section, poem, restoreFocus);
+      resolve();
+    }, getPoemAnimationDuration());
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

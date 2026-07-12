@@ -243,6 +243,7 @@ h1::after {
   border-radius: 3px / 6px;
   transform: rotate(-0.4deg);
   background-color: #ecdcb4;
+  transform-origin: center top;
   background-image:
     radial-gradient(
       ellipse at 15% 20%,
@@ -271,6 +272,12 @@ h1::after {
     0 0 0 1px rgba(90, 62, 30, 0.25),
     inset 0 0 40px rgba(90, 62, 30, 0.25),
     inset 0 0 90px rgba(139, 98, 51, 0.15);
+  animation: poem-open 340ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.section.expanded.closing {
+  pointer-events: none;
+  animation: poem-close 340ms cubic-bezier(0.55, 0, 0.4, 1) both;
 }
 
 .close-button {
@@ -339,4 +346,35 @@ h1::after {
 
 .stanza:last-child {
   margin-bottom: 0;
+}
+
+@keyframes poem-open {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem) scale(0.985) rotate(-0.55deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) rotate(-0.4deg);
+  }
+}
+
+@keyframes poem-close {
+  from {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) rotate(-0.4deg);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(0.35rem) scale(0.99) rotate(-0.5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section.expanded,
+  .section.expanded.closing {
+    animation-duration: 1ms;
+  }
 }
