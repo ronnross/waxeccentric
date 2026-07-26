@@ -138,9 +138,9 @@ export default async function RoutineDetailPage({ params }: Props) {
                 ) : null;
               })()}
 
-              {groups.map((g, gi) => (
+              {groups.map((g) => (
                 <div
-                  key={gi}
+                  key={g.exercises.map((exercise) => exercise.id).join("-")}
                   className={g.group ? "superset-group" : undefined}
                 >
                   {g.group && section.format === "emom" && (

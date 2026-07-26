@@ -14,23 +14,29 @@ Install all workspace dependencies from the repository root:
 npm install
 ```
 
-Run the main site or Kallos Sthenos independently:
+Run the main site and Kallos Sthenos together:
 
 ```bash
 npm run dev
+```
+
+The main site is available at `http://localhost:3000`, with Kallos Sthenos
+proxied at `http://localhost:3000/kallos-sthenos/`. To run only Kallos Sthenos:
+
+```bash
 npm run dev:kallos-sthenos
 ```
 
-Kallos Sthenos uses a base path, so open the port printed by Next at
-`/kallos-sthenos/`. Its SQLite database is created in
+Kallos Sthenos uses a base path, so append `/kallos-sthenos/` when running it
+independently. Its SQLite database is created in
 `apps/kallos-sthenos/data/kallos.db`.
 
-Build every app with `npm run build`. Run the Kallos Sthenos tests with
-`npm run test:kallos-sthenos`.
+Run `npm run check` for formatting, lint, type checks, and tests. Build every
+app with `npm run build`.
 
 ## Deployment
 
-The main site and Verse are static files assembled by `scripts/deploy.sh`.
+The main site and Verse are static files deployed with `npm run deploy:static`.
 Kallos Sthenos is a server application and must run as a separate Node process
 or container. Start it with:
 

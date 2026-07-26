@@ -7,22 +7,22 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "turbo dev --filter=@waxeccentric/www",
+    "dev": "turbo dev --filter=@waxeccentric/www --filter=@waxeccentric/kallos-sthenos",
     "dev:kallos-sthenos": "turbo dev --filter=@waxeccentric/kallos-sthenos",
     "build": "turbo build",
-    "start": "turbo start --filter=@waxeccentric/www",
     "start:kallos-sthenos": "turbo start --filter=@waxeccentric/kallos-sthenos",
-    "test:kallos-sthenos": "npm run test:run --workspace=@waxeccentric/kallos-sthenos",
-    "deploy": "./scripts/deploy.sh",
+    "test": "turbo test",
+    "test:kallos-sthenos": "npm run test --workspace=@waxeccentric/kallos-sthenos",
+    "deploy:static": "./scripts/deploy.sh",
     "preview:build": "./scripts/preview-build.sh",
     "preview": "./scripts/preview.sh",
     "typecheck": "turbo typecheck",
     "lint": "biome lint .",
-    "check": "biome check . && turbo typecheck",
+    "check": "biome check . && turbo typecheck test",
     "format": "biome format --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.3",
+    "@biomejs/biome": "^2.5.5",
     "turbo": "^2.6.3"
   }
 }

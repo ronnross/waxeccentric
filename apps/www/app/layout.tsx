@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import type { ReactNode } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -14,7 +15,9 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
       <body>

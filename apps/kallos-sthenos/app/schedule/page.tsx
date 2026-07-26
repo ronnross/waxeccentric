@@ -88,15 +88,15 @@ export default function SchedulePage() {
     if (res.ok) setMonthEntries(await res.json());
   }, []);
 
-  async function loadRoutines() {
+  const loadRoutines = useCallback(async () => {
     const res = await fetch(appPath("/api/routines"));
     if (res.ok) setRoutines(await res.json());
-  }
+  }, []);
 
   useEffect(() => {
     loadMonth(viewYear, viewMonth);
     loadRoutines();
-  }, [viewYear, viewMonth, loadMonth]);
+  }, [viewYear, viewMonth, loadMonth, loadRoutines]);
 
   function prevMonth() {
     if (viewMonth === 0) {

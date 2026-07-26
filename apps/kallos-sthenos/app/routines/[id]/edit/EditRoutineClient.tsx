@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { appPath } from "@/lib/base-path";
 import type { Exercise } from "@/lib/schemas/exercise";
 import type { RoutineDetail, RoutineSection } from "@/lib/schemas/routine";
@@ -42,20 +42,20 @@ export default function EditRoutineClient({
   const [addToSectionId, setAddToSectionId] = useState<number | null>(null);
   const [exSubmitting, setExSubmitting] = useState(false);
 
-  async function loadRoutine() {
+  const loadRoutine = useCallback(async () => {
     const res = await fetch(appPath(`/api/routines/${routineId}`));
     if (res.ok) setRoutine(await res.json());
-  }
+  }, [routineId]);
 
-  async function loadExercises() {
+  const loadExercises = useCallback(async () => {
     const res = await fetch(appPath("/api/exercises"));
     if (res.ok) setExercises(await res.json());
-  }
+  }, []);
 
   useEffect(() => {
     loadRoutine();
     loadExercises();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [loadRoutine, loadExercises]);
 
   // ─── Section handlers ──────────────────────────────────
 

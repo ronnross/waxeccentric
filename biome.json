@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.5/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -20,5 +20,27 @@
         "noImportantStyles": "off"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["apps/kallos-sthenos/**"],
+      "linter": {
+        "rules": {
+          "preset": "none"
+        }
+      },
+      "javascript": {
+        "formatter": {
+          "quoteStyle": "double"
+        }
+      },
+      "assist": {
+        "actions": {
+          "source": {
+            "organizeImports": "on"
+          }
+        }
+      }
+    }
+  ]
 }

@@ -38,31 +38,34 @@ export default function TabataTimer({
   const totalMs = roundMs * rounds;
 
   // Derive current round and phase from elapsed time
-  function getPosition(elapsed: number) {
-    if (elapsed >= totalMs)
-      return {
-        round: rounds,
-        phase: "rest" as Phase,
-        phaseElapsed: restMs,
-        phaseTotal: restMs,
-      };
-    const roundIndex = Math.floor(elapsed / roundMs);
-    const withinRound = elapsed - roundIndex * roundMs;
-    if (withinRound < workMs) {
+  const getPosition = useCallback(
+    (elapsed: number) => {
+      if (elapsed >= totalMs)
+        return {
+          round: rounds,
+          phase: "rest" as Phase,
+          phaseElapsed: restMs,
+          phaseTotal: restMs,
+        };
+      const roundIndex = Math.floor(elapsed / roundMs);
+      const withinRound = elapsed - roundIndex * roundMs;
+      if (withinRound < workMs) {
+        return {
+          round: roundIndex + 1,
+          phase: "work" as Phase,
+          phaseElapsed: withinRound,
+          phaseTotal: workMs,
+        };
+      }
       return {
         round: roundIndex + 1,
-        phase: "work" as Phase,
-        phaseElapsed: withinRound,
-        phaseTotal: workMs,
+        phase: "rest" as Phase,
+        phaseElapsed: withinRound - workMs,
+        phaseTotal: restMs,
       };
-    }
-    return {
-      round: roundIndex + 1,
-      phase: "rest" as Phase,
-      phaseElapsed: withinRound - workMs,
-      phaseTotal: restMs,
-    };
-  }
+    },
+    [restMs, roundMs, rounds, totalMs, workMs],
+  );
 
   const pos = getPosition(elapsedMs);
   const phaseRemaining = Math.max(
@@ -182,7 +185,7 @@ export default function TabataTimer({
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [state, totalMs, alertWork, alertRest, alertFinish]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [state, totalMs, alertWork, alertRest, alertFinish, getPosition]);
 
   function handleStart() {
     getAudioCtx();
