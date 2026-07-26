@@ -29,6 +29,9 @@ export default function Home() {
           <a className={styles.secondaryAction} href="/verse/">
             Open Verse
           </a>
+          <a className={styles.secondaryAction} href="/kallos-sthenos/">
+            Open Kallos Sthenos
+          </a>
         </div>
       </section>
 
@@ -49,14 +52,14 @@ export default function Home() {
             stanzas and illuminated fragments.
           </span>
         </a>
-        <div className={styles.feature}>
+        <a className={styles.feature} href="/kallos-sthenos/">
           <span className={styles.featureIndex}>03</span>
-          <span className={styles.featureTitle}>More Soon</span>
+          <span className={styles.featureTitle}>Kallos Sthenos</span>
           <span className={styles.featureText}>
-            The monorepo is ready for more small worlds under the Wax Eccentric
-            banner.
+            Plan workouts, build structured routines, schedule training, and
+            track progress in a focused personal fitness workspace.
           </span>
-        </div>
+        </a>
       </section>
     </main>
   );

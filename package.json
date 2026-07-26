@@ -8,8 +8,11 @@
   ],
   "scripts": {
     "dev": "turbo dev --filter=@waxeccentric/www",
+    "dev:kallos-sthenos": "turbo dev --filter=@waxeccentric/kallos-sthenos",
     "build": "turbo build",
     "start": "turbo start --filter=@waxeccentric/www",
+    "start:kallos-sthenos": "turbo start --filter=@waxeccentric/kallos-sthenos",
+    "test:kallos-sthenos": "npm run test:run --workspace=@waxeccentric/kallos-sthenos",
     "deploy": "./scripts/deploy.sh",
     "preview:build": "./scripts/preview-build.sh",
     "preview": "./scripts/preview.sh",

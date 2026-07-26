@@ -1,0 +1,122 @@
+/* ===== Google Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Design Tokens ===== */
+:root {
+  --color-primary: #007b34;
+  --color-primary-hover: #00491f;
+  --color-primary-light: #bde9c9;
+  --color-accent: #00a749;
+  --color-accent-hover: #007b34;
+  --color-accent-light: #e8f5e9;
+  --color-surface: #ffffff;
+  --color-background: #fafaf5;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-border: #d6d6d0;
+  --color-success: #007b34;
+  --color-success-light: #bde9c9;
+  --color-danger: #d32f2f;
+  --color-danger-light: #fdecea;
+  --color-warning: #f9a825;
+  --color-warning-light: #fff8e1;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  --font-sans: "Nunito", system-ui, -apple-system, sans-serif;
+  --font-serif: "Nunito", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", monospace;
+
+  --nav-height: 64px;
+  --header-height: 60px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Base ===== */
+html {
+  font-size: 16px;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* ===== Utility ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Shared note/annotation text style — use instead of inline font-size */
+.text-note {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* "per side" and similar inline badges inside exercise names */
+.exercise-name .badge {
+  font-size: 0.75rem;
+  vertical-align: middle;
+  margin-left: 6px;
+}

@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: apps/kallos-sthenos/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

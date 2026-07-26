@@ -1,0 +1,25 @@
+import { fileURLToPath } from "node:url";
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL(".", import.meta.url)),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    environmentOptions: {
+      jsdom: {
+        url: "http://localhost:3000",
+      },
+    },
+    setupFiles: ["./test/setup.ts"],
+    include: ["**/*.{test,spec}.{ts,tsx,js,jsx}"],
+    exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**"],
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "html"],
+    },
+  },
+});

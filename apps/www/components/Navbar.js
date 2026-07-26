@@ -11,6 +11,7 @@ const Navbar = () => {
         <Link href="/">Home</Link>
         <Link href="/ametrica">Ametrica</Link>
         <a href="/verse/">Verse</a>
+        <a href="/kallos-sthenos/">Kallos Sthenos</a>
       </nav>
     </header>
   );

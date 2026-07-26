@@ -1,0 +1,10 @@
+.git
+.github
+.local-preview
+.turbo
+**/.next
+**/node_modules
+**/out
+apps/kallos-sthenos/backups
+apps/kallos-sthenos/coverage
+apps/kallos-sthenos/data/*.db*

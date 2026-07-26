@@ -1,0 +1,123 @@
+/* ===== App Shell Layout ===== */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 var(--space-md);
+  background: var(--color-text);
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.app-header h1 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--color-background);
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-sm);
+  padding-bottom: calc(var(--nav-height) + var(--space-sm));
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== Bottom Nav ===== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: var(--nav-height);
+  background: var(--color-text);
+  border-top: 3px solid var(--color-accent);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-xs) var(--space-sm);
+  min-width: 56px;
+  min-height: 44px;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--color-accent);
+}
+
+.nav-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .app-main {
+    padding: var(--space-lg);
+    padding-bottom: calc(var(--nav-height) + var(--space-lg));
+  }
+}
+
+/* Desktop — sidebar only on true desktop widths */
+@media (min-width: 1280px) {
+  .bottom-nav {
+    position: sticky;
+    top: var(--header-height);
+    bottom: auto;
+    left: 0;
+    right: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-xs);
+    width: 80px;
+    height: calc(100dvh - var(--header-height));
+    align-self: flex-start;
+    border-top: none;
+    border-right: 3px solid var(--color-accent);
+    padding: var(--space-md) 0;
+  }
+
+  .app-body {
+    display: flex;
+  }
+
+  .app-main {
+    padding-bottom: var(--space-lg);
+  }
+}
