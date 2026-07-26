@@ -1,6 +1,6 @@
 # Wax Eccentric
 
-An npm/Turborepo workspace containing three independently built applications:
+A pnpm/Turborepo workspace containing three independently built applications:
 
 - `apps/www`: the statically exported main site
 - `apps/verse`: a static poetry app served at `/verse/`
@@ -11,37 +11,37 @@ An npm/Turborepo workspace containing three independently built applications:
 Install all workspace dependencies from the repository root:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Run the main site and Kallos Sthenos together:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 The main site is available at `http://localhost:3000`, with Kallos Sthenos
 proxied at `http://localhost:3000/kallos-sthenos/`. To run only Kallos Sthenos:
 
 ```bash
-npm run dev:kallos-sthenos
+pnpm run dev:kallos-sthenos
 ```
 
 Kallos Sthenos uses a base path, so append `/kallos-sthenos/` when running it
 independently. Its SQLite database is created in
 `apps/kallos-sthenos/data/kallos.db`.
 
-Run `npm run check` for formatting, lint, type checks, and tests. Build every
-app with `npm run build`.
+Run `pnpm run check` for formatting, lint, type checks, and tests. Build every
+app with `pnpm run build`.
 
 ## Deployment
 
-The main site and Verse are static files deployed with `npm run deploy:static`.
+The main site and Verse are static files deployed with `pnpm run deploy:static`.
 Kallos Sthenos is a server application and must run as a separate Node process
 or container. Start it with:
 
 ```bash
-npm run start:kallos-sthenos
+pnpm run start:kallos-sthenos
 ```
 
 The public web server must proxy the full subpath without stripping it. For

@@ -16,18 +16,18 @@ A personal workout planning app built with Next.js. Create exercises, compose th
 ### Prerequisites
 
 - Node.js 20+
-- npm
+- pnpm 11
 
 ### Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Seed the Database (optional)
 
 ```bash
-npm run seed
+pnpm run seed
 ```
 
 The SQLite database is created automatically at `data/kallos.db` on first run. Migrations run on startup.
@@ -35,7 +35,7 @@ The SQLite database is created automatically at `data/kallos.db` on first run. M
 ### Development
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Opens on `http://localhost:3000` (auto-finds a free port if 3000 is taken).
@@ -43,24 +43,24 @@ Opens on `http://localhost:3000` (auto-finds a free port if 3000 is taken).
 ### Run Tests
 
 ```bash
-npm test          # watch mode
-npm run test:run  # single run
-npm run test:coverage
+pnpm run test:watch
+pnpm test
+pnpm run test:coverage
 ```
 
 ### Lint & Format
 
 ```bash
-npm run lint
-npm run format
-npm run check     # lint + format in one pass
+pnpm run lint
+pnpm run format
+pnpm run check     # lint + format in one pass
 ```
 
 ### Build for Production
 
 ```bash
-npm run build
-npm start
+pnpm run build
+pnpm start
 ```
 
 ## Docker
@@ -68,9 +68,9 @@ npm start
 The app includes a Dockerfile and docker-compose for self-hosting.
 
 ```bash
-npm run docker:up     # build image & start container
-npm run docker:down   # stop container
-npm run docker:build  # build image only
+pnpm run docker:up     # build image & start container
+pnpm run docker:down   # stop container
+pnpm run docker:build  # build image only
 ```
 
 The container bind-mounts `./data` so it uses your local SQLite database directly. The app runs on port 3000.
@@ -80,8 +80,8 @@ The container bind-mounts `./data` so it uses your local SQLite database directl
 SQLite with WAL mode. The database file lives at `data/kallos.db` and is git-ignored.
 
 ```bash
-npm run db:backup   # snapshot to backups/
-npm run seed        # seed with sample data
+pnpm run db:backup   # snapshot to backups/
+pnpm run seed        # seed with sample data
 ```
 
 ## Project Structure

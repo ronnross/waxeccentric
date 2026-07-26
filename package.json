@@ -2,17 +2,14 @@
   "name": "waxeccentric",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "npm@11.17.0",
-  "workspaces": [
-    "apps/*"
-  ],
+  "packageManager": "pnpm@11.15.1",
   "scripts": {
     "dev": "turbo dev --filter=@waxeccentric/www --filter=@waxeccentric/kallos-sthenos",
     "dev:kallos-sthenos": "turbo dev --filter=@waxeccentric/kallos-sthenos",
     "build": "turbo build",
     "start:kallos-sthenos": "turbo start --filter=@waxeccentric/kallos-sthenos",
     "test": "turbo test",
-    "test:kallos-sthenos": "npm run test --workspace=@waxeccentric/kallos-sthenos",
+    "test:kallos-sthenos": "pnpm --filter @waxeccentric/kallos-sthenos test",
     "deploy:static": "./scripts/deploy.sh",
     "preview:build": "./scripts/preview-build.sh",
     "preview": "./scripts/preview.sh",
@@ -23,6 +20,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.5",
-    "turbo": "^2.6.3"
+    "turbo": "^2.10.7"
   }
 }

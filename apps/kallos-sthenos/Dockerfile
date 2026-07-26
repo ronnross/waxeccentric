@@ -1,16 +1,21 @@
 # ---- Dependencies ----
 FROM node:20-slim AS deps
 WORKDIR /app
-COPY package.json package-lock.json ./
+RUN corepack enable && corepack prepare pnpm@11.15.1 --activate
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/kallos-sthenos/package.json ./apps/kallos-sthenos/package.json
-RUN npm ci --workspace=@waxeccentric/kallos-sthenos
+COPY apps/verse/package.json ./apps/verse/package.json
+COPY apps/www/package.json ./apps/www/package.json
+RUN pnpm install --frozen-lockfile --filter @waxeccentric/kallos-sthenos
 
 # ---- Build ----
 FROM node:20-slim AS builder
 WORKDIR /app
+RUN corepack enable && corepack prepare pnpm@11.15.1 --activate
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/kallos-sthenos/node_modules ./apps/kallos-sthenos/node_modules
 COPY . .
-RUN npm run build --workspace=@waxeccentric/kallos-sthenos
+RUN pnpm --filter @waxeccentric/kallos-sthenos build
 
 # ---- Runtime ----
 FROM node:20-slim AS runner
