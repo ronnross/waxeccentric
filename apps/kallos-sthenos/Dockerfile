@@ -28,6 +28,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
+ENV KALLOS_DB_PATH=/app/data/kallos.db
 
 # better-sqlite3 needs these native libs at runtime
 RUN apt-get update && apt-get install -y --no-install-recommends \

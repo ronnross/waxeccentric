@@ -5,6 +5,9 @@ services:
       dockerfile: apps/kallos-sthenos/Dockerfile
     ports:
       - "3000:3000"
+    environment:
+      KALLOS_DB_PATH: /app/data/kallos.db
     volumes:
       - ./data:/app/data
+      - ./data:/app/apps/kallos-sthenos/data
     restart: unless-stopped
