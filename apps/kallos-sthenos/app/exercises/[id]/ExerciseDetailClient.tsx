@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import ExerciseHistory from "@/components/ExerciseHistory";
@@ -271,11 +272,16 @@ export default function ExerciseDetailClient({
         if (visualUrl) {
           return (
             <div className="card" style={{ marginBottom: "var(--space-md)" }}>
-              <img
+              <Image
                 src={visualUrl}
                 alt={`${exercise.name} reference`}
+                width={1200}
+                height={675}
+                sizes="(max-width: 768px) 100vw, 768px"
+                unoptimized
                 style={{
                   width: "100%",
+                  height: "auto",
                   maxHeight: 320,
                   objectFit: "cover",
                   borderRadius: "var(--radius-sm)",

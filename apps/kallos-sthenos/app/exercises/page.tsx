@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { listExercises } from "@/lib/db/queries/exercises";
 import type { Exercise } from "@/lib/schemas/exercise";
@@ -99,9 +100,13 @@ export default async function ExercisesPage({ searchParams }: Props) {
                   const visualUrl = getExerciseVisual(exercise);
                   if (visualUrl) {
                     return (
-                      <img
+                      <Image
                         src={visualUrl}
                         alt={`${exercise.name} reference`}
+                        width={400}
+                        height={140}
+                        sizes="(max-width: 640px) 100vw, 400px"
+                        unoptimized
                         style={{
                           width: "100%",
                           height: 140,
