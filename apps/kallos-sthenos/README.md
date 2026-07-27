@@ -75,6 +75,9 @@ pnpm run docker:build  # build image only
 
 The container bind-mounts `./data` so it uses your local SQLite database directly. The app runs on port 3000.
 
+For the initial transfer of an existing local database to a production server,
+follow the [production data migration runbook](docs/production-data-migration.md).
+
 ## Database
 
 SQLite with WAL mode. The database file lives at `data/kallos.db` and is git-ignored.

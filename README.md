@@ -60,3 +60,6 @@ location /kallos-sthenos/ {
 The containerized app can be run from its directory with
 `docker compose up -d --build`. The compose volume persists SQLite data under
 `apps/kallos-sthenos/data`.
+
+To copy an existing local database to the production volume, follow the
+[production data migration runbook](apps/kallos-sthenos/docs/production-data-migration.md).

@@ -48,6 +48,8 @@ next-env.d.ts
 
 # local database backups
 /backups/*.db
+/backups/*.db-shm
+/backups/*.db-wal
 /backups/*.sqlite
 
 # SQLite database

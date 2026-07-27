@@ -9,6 +9,7 @@ VERSE_BUILD_DIR="apps/verse/out"
 cd "$APP_DIR"
 git pull
 pnpm install --frozen-lockfile
-pnpm run build
+pnpm exec turbo build --filter=@waxeccentric/www --filter=@waxeccentric/verse
+./scripts/migrate-kallos-data.sh
 rsync -av --delete --exclude "/verse/" "$WWW_BUILD_DIR/" "$DEPLOY_DIR/"
 rsync -av --delete "$VERSE_BUILD_DIR/" "$DEPLOY_DIR/verse/"

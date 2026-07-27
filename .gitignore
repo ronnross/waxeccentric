@@ -20,6 +20,10 @@
 # production
 /build
 
+# one-time migration payloads
+/migrations/*
+!/migrations/README.md
+
 # misc
 .DS_Store
 *.pem
