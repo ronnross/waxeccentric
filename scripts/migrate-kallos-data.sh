@@ -30,6 +30,32 @@ try {
   if (result !== "ok") {
     throw new Error(`SQLite integrity check failed: ${result}`);
   }
+
+  const requiredTables = ["exercises", "routines"];
+  for (const table of requiredTables) {
+    const exists = database
+      .prepare("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ?")
+      .get(table);
+    if (!exists) {
+      throw new Error(`SQLite migration is missing required table: ${table}`);
+    }
+  }
+
+  const counts = Object.fromEntries(
+    requiredTables.map((table) => [
+      table,
+      database.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get().count,
+    ]),
+  );
+  if (counts.exercises === 0 || counts.routines === 0) {
+    throw new Error(
+      `Refusing empty Kallos migration: ${counts.exercises} exercises, ${counts.routines} routines`,
+    );
+  }
+
+  console.log(
+    `Migration content: ${counts.exercises} exercises, ${counts.routines} routines`,
+  );
 } finally {
   database.close();
 }
