@@ -1,6 +1,10 @@
 # ---- Dependencies ----
-FROM node:20-slim AS deps
+FROM node:24-slim AS deps
 WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    python3 \
+    && rm -rf /var/lib/apt/lists/*
 RUN corepack enable && corepack prepare pnpm@11.15.1 --activate
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/kallos-sthenos/package.json ./apps/kallos-sthenos/package.json
@@ -9,7 +13,7 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN pnpm install --frozen-lockfile --filter @waxeccentric/kallos-sthenos
 
 # ---- Build ----
-FROM node:20-slim AS builder
+FROM node:24-slim AS builder
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@11.15.1 --activate
 COPY --from=deps /app/node_modules ./node_modules
@@ -18,7 +22,7 @@ COPY . .
 RUN pnpm --filter @waxeccentric/kallos-sthenos build
 
 # ---- Runtime ----
-FROM node:20-slim AS runner
+FROM node:24-slim AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production

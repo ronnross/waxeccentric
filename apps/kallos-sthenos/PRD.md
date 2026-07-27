@@ -14,7 +14,7 @@
 | Styling | **Plain CSS** with custom properties (mobile-first) |
 | PWA | **`@ducanh2912/next-pwa`** (service worker + web app manifest) |
 | Validation | **Zod** (shared schemas for API & forms) |
-| Runtime | **Node.js 20+** |
+| Runtime | **Node.js 22.13+** |
 
 ---
 

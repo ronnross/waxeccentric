@@ -15,7 +15,7 @@ A personal workout planning app built with Next.js. Create exercises, compose th
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 22.13+ (Node.js 24 recommended)
 - pnpm 11
 
 ### Install
