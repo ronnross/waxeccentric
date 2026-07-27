@@ -96,6 +96,37 @@ docker compose -f "$COMPOSE_FILE" run --rm --no-deps --user root \
   ' sh "$timestamp"
 
 docker compose -f "$COMPOSE_FILE" up -d app
+
+docker compose -f "$COMPOSE_FILE" exec -T app node <<'NODE'
+const Database = require("better-sqlite3");
+
+const database = new Database("/app/data/kallos.db", {
+  fileMustExist: true,
+  readonly: true,
+});
+
+try {
+  const exercises = database
+    .prepare("SELECT COUNT(*) AS count FROM exercises")
+    .get().count;
+  const routines = database
+    .prepare("SELECT COUNT(*) AS count FROM routines")
+    .get().count;
+
+  if (exercises === 0 || routines === 0) {
+    throw new Error(
+      `Imported Kallos database is empty: ${exercises} exercises, ${routines} routines`,
+    );
+  }
+
+  console.log(
+    `Verified imported data: ${exercises} exercises, ${routines} routines`,
+  );
+} finally {
+  database.close();
+}
+NODE
+
 restart_required=false
 trap - EXIT
 

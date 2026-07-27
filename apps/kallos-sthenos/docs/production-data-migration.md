@@ -100,7 +100,8 @@ When `migrations/kallos-production.db` exists, deployment automatically:
    under `apps/kallos-sthenos/data/migration-backups`.
 5. Imports the staged database with the required container ownership.
 6. Starts Kallos again.
-7. Moves the consumed snapshot under `migrations/applied` so later deployments
+7. Verifies the imported exercises and routines inside the running container.
+8. Moves the consumed snapshot under `migrations/applied` so later deployments
    cannot apply it again.
 
 Watch the logs after deployment:
