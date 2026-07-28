@@ -42,20 +42,13 @@ yarn-error.log*
 next-env.d.ts
 
 # sqlite database
-/data/*.db
-/data/*.db-shm
-/data/*.db-wal
+/data/
 
 # local database backups
 /backups/*.db
 /backups/*.db-shm
 /backups/*.db-wal
 /backups/*.sqlite
-
-# SQLite database
-/data/*.db
-/data/*.db-wal
-/data/*.db-shm
 
 # PWA generated
 /public/sw.js
