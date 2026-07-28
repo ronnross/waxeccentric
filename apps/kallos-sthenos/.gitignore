@@ -45,10 +45,7 @@ next-env.d.ts
 /data/
 
 # local database backups
-/backups/*.db
-/backups/*.db-shm
-/backups/*.db-wal
-/backups/*.sqlite
+/backups/
 
 # PWA generated
 /public/sw.js
