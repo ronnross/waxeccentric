@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start -p $(node scripts/find-port.mjs 3000)",
     "db:backup": "tsx scripts/backup-db.ts",
+    "db:import-api": "tsx scripts/import-via-api.ts",
     "seed": "tsx scripts/seed.ts",
     "lint": "biome lint .",
     "format": "biome format --write .",
