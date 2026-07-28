@@ -4,7 +4,7 @@ services:
       context: ../..
       dockerfile: apps/kallos-sthenos/Dockerfile
     ports:
-      - "3000:3000"
+      - "127.0.0.1:3000:3000"
     environment:
       KALLOS_DB_PATH: /app/data/kallos.db
     volumes:
